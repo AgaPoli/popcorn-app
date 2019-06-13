@@ -1,0 +1,36 @@
+mat-toolbar{
+
+ 
+  display: grid;
+  grid-template-areas: "all_mowies_and_tv  all_mowies all_tv_shows filters release_year genres rating year";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  font-size: 10px;
+  background-color: rgb(255, 210, 86);
+
+  #all_mowies_and_tv {
+    grid-area: all_mowies_and_tv;
+  }
+
+  #all_tv_shows {
+    grid-area: all_tv_shows;
+  }
+
+  #filters {
+    grid-area: filters;
+  }
+
+  #release_year {
+    grid-area: release_year;
+  }
+
+  #genres {
+    grid-area: genres;
+  }
+  #rating {
+    grid-area: rating;
+  }
+  #year {
+    grid-area: year;
+  }
+}

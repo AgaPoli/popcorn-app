@@ -1,3 +1,52 @@
-<p>
-  filter-wrap works!
-</p>
+
+<mat-toolbar >
+<button id="all_mowies_and_tv"  mat-button>All</button>
+<button id="all_mowies"  mat-button>Movies</button>
+<button id="all_tv_shows"  mat-button>TV Shows</button>
+<button id="filters"  mat-button><i class="fas fa-filter"></i>
+  FILTERS</button>
+
+<mat-form-field id="release_year">
+    <input type="text" matInput placeholder="Release year" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+      <mat-autocomplete #autoGroup="matAutocomplete">
+        <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+          <mat-option *ngFor="let name of group.names" [value]="name">
+            {{name}}
+          </mat-option>
+      </mat-optgroup>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field id="genres">
+      <input type="text" matInput placeholder="Genres" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+        <mat-autocomplete #autoGroup="matAutocomplete">
+          <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+            <mat-option *ngFor="let name of group.names" [value]="name">
+              {{name}}
+            </mat-option>
+        </mat-optgroup>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <mat-form-field id="rating">
+        <input type="text" matInput placeholder="Rating" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+          <mat-autocomplete #autoGroup="matAutocomplete">
+            <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+              <mat-option *ngFor="let name of group.names" [value]="name">
+                {{name}}
+              </mat-option>
+          </mat-optgroup>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field id="year">
+          <input type="text" matInput placeholder="Year" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+            <mat-autocomplete #autoGroup="matAutocomplete">
+              <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                <mat-option *ngFor="let name of group.names" [value]="name">
+                  {{name}}
+                </mat-option>
+            </mat-optgroup>
+          </mat-autocomplete>
+        </mat-form-field>
+      </mat-toolbar>
