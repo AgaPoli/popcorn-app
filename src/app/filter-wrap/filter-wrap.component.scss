@@ -1,12 +1,22 @@
-mat-toolbar{
 
- 
+.testx{
+  color: var(--popcorn-primary);
+}
+
+.testy{
+  color: var(--popcorn-primary-dark);
+}
+
+.testa{
+  color: var(--popcorn-accent);
+}
+
+mat-toolbar{
   display: grid;
   grid-template-areas: "all_mowies_and_tv  all_mowies all_tv_shows filters release_year genres rating year";
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 1em;
   font-size: 10px;
-  background-color: rgb(255, 210, 86);
 
   #all_mowies_and_tv {
     grid-area: all_mowies_and_tv;
@@ -33,4 +43,6 @@ mat-toolbar{
   #year {
     grid-area: year;
   }
+
+
 }

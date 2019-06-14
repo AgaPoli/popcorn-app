@@ -1,27 +1,27 @@
 <mat-toolbar >
     <img id="logo" src="assets/images/1.2.jpg" alt="Logo">
    
-    <button id="new_movie1"  mat-button>NEW</button>
-    <button id="new_movie2"  mat-button>POPULAR</button>
-    <button id="new_movie3"  mat-button>WATCHLIST</button>
-    
-    
+   
+   <span id="btn_group">
+        <button id="new_movie1"  mat-button>NEW</button>
+        <button id="new_movie2"  mat-button>POPULAR</button>
+        <button id="new_movie3"  mat-button>WATCHLIST</button>
+    </span > 
+   
 
-  
-    <input id="search" matInput type="text" placeholder="Search for movies">
-
-    <button id="search_button" mat-icon-button aria-label="search_button">
-            <mat-icon>search</mat-icon>
-          </button>
-  
+    <!-- https://material.angular.io/components/form-field/api -->
+    <mat-form-field id="search">
+        <input matInput type="text" placeholder="Search for movies">
+        <mat-icon color="secondary" matSuffix >search</mat-icon>
+    </mat-form-field>
 
     <button id="account_btn" mat-icon-button aria-label="Account">
         <mat-icon>account_circle</mat-icon>
     </button>
-
+ 
     <button id="menu_btn" mat-icon-button aria-label="Menu">
             <mat-icon>more_vert</mat-icon>
     </button>
 
 </mat-toolbar>
-<hr style="border: 0px; background: rgb(242, 183, 36); height: 1px; margin:0">
+<hr>

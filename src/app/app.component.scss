@@ -2,3 +2,15 @@ body {
     font-family: Open Sans,Arial,sans-serif;
     font-size: 14px;
 }
+    .main-wraper{
+        display: grid;
+        grid-template-areas: "toolbar toolbar toolbar toolbar" "main_contnent main_contnent main_contnent main_contnent";
+    }
+
+    app-filter-wrap{
+        grid-area: toolbar;
+    }
+    
+    app-main-content{
+        grid-area: main_contnent;
+    }

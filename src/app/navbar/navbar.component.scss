@@ -1,11 +1,12 @@
 mat-toolbar {
   display: grid;
-  grid-template-areas: "logo new_movie1 new_movie2 new_movie3 search search_button account_btn menu_btn";
-  grid-template-columns: 1fr 1fr 1fr 1fr 4fr 0.3fr 0.3fr;
+  grid-template-areas: "logo btn_group search search_button account_btn menu_btn";
+  grid-template-columns: 1fr 4fr 4fr 0.3fr 0.3fr;
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
   background-color: rgb(250, 200, 51);
+  height: 5em;
 
   #logo {
     max-height: 100%;
@@ -26,20 +27,14 @@ mat-toolbar {
 
   #search {
     grid-area: search;
-
-    font-size: 1rem;
-    overflow: hidden;
-    width: 400px;
-    vertical-align: middle;
-    white-space: nowrap;
-    background: rgb(247, 235, 202);
-    padding-left: 15px;
+    width: 100%;
   }
+
   #search_button {
     grid-area: search;
     float: right;
-    
   }
+
   #account_btn {
     grid-area: account_btn;
     justify-self: center;
@@ -49,4 +44,15 @@ mat-toolbar {
   #menu_btn {
     grid-area: menu_btn;
   }
+
+#btn_group{
+  display: grid;
+  grid-template-areas: "new_movie1 new_movie2 new_movie3";
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-column-gap: 1em;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+
+}
 }

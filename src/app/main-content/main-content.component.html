@@ -1,9 +1,5 @@
-<div id= "image_container" class="example-ripple-container mat-elevation-z4"
-     matRipple
-     [matRippleCentered]="centered"
-     [matRippleDisabled]="disabled"
-     [matRippleUnbounded]="unbounded"
-     [matRippleRadius]="radius"
-     [matRippleColor]="color">
-  Click me
+<div id="image_container">
+  <div *ngFor="let movie of movies">
+    {{movie}}
+  </div>
 </div>
