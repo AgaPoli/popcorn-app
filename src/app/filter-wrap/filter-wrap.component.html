@@ -1,49 +1,96 @@
-<mat-toolbar 
-color="primary"
->
+<mat-toolbar color="primary">
 
-<mat-button-toggle-group id="categories" name="filtrCategory">
-  <mat-button-toggle value="all" color="primary">All</mat-button-toggle>
-  <mat-button-toggle value="movies">Movies</mat-button-toggle>
-  <mat-button-toggle value="tv_serials">TV Serials</mat-button-toggle>
-</mat-button-toggle-group>
+  <mat-button-toggle-group
+    appearance="legacy"
+    id="categories"
+    name="filtrCategory"
+  >
+    <mat-button-toggle
+      value="all"
+      color="primary"
+    >All</mat-button-toggle>
+    <mat-button-toggle value="movies">Movies</mat-button-toggle>
+    <mat-button-toggle value="tv_serials">TV Serials</mat-button-toggle>
+  </mat-button-toggle-group>
 
-<button id="filters"  mat-button><i class="fas fa-filter"></i>
-  FILTERS</button>
+  <button
+    id="filters"
+    mat-button
+  ><i class="fas fa-filter"></i>
+    FILTERS</button>
 
-<app-release-year id="release_year"></app-release-year>
-   
+  <app-release-year id="release_year"></app-release-year>
+
 
   <mat-form-field id="genres">
-      <input type="text" matInput placeholder="Genres" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
-        <mat-autocomplete #autoGroup="matAutocomplete">
-          <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
-            <mat-option *ngFor="let name of group.names" [value]="name">
-              {{name}}
-            </mat-option>
-        </mat-optgroup>
-      </mat-autocomplete>
-    </mat-form-field>
+    <input
+      type="text"
+      matInput
+      placeholder="Genres"
+      formControlName="stateGroup"
+      required
+      [matAutocomplete]="autoGroup"
+    >
+    <mat-autocomplete #autoGroup="matAutocomplete">
+      <mat-optgroup
+        *ngFor="let group of stateGroupOptions | async"
+        [label]="group.letter"
+      >
+        <mat-option
+          *ngFor="let name of group.names"
+          [value]="name"
+        >
+          {{name}}
+        </mat-option>
+      </mat-optgroup>
+    </mat-autocomplete>
+  </mat-form-field>
 
-    <mat-form-field id="rating">
-        <input type="text" matInput placeholder="Rating" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
-          <mat-autocomplete #autoGroup="matAutocomplete">
-            <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
-              <mat-option *ngFor="let name of group.names" [value]="name">
-                {{name}}
-              </mat-option>
-          </mat-optgroup>
-        </mat-autocomplete>
-      </mat-form-field>
+  <mat-form-field id="rating">
+    <input
+      type="text"
+      matInput
+      placeholder="Rating"
+      formControlName="stateGroup"
+      required
+      [matAutocomplete]="autoGroup"
+    >
+    <mat-autocomplete #autoGroup="matAutocomplete">
+      <mat-optgroup
+        *ngFor="let group of stateGroupOptions | async"
+        [label]="group.letter"
+      >
+        <mat-option
+          *ngFor="let name of group.names"
+          [value]="name"
+        >
+          {{name}}
+        </mat-option>
+      </mat-optgroup>
+    </mat-autocomplete>
+  </mat-form-field>
 
-      <mat-form-field id="year">
-          <input type="text" matInput placeholder="Year" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
-            <mat-autocomplete #autoGroup="matAutocomplete">
-              <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
-                <mat-option *ngFor="let name of group.names" [value]="name">
-                  {{name}}
-                </mat-option>
-            </mat-optgroup>
-          </mat-autocomplete>
-        </mat-form-field>
-      </mat-toolbar>
+  <mat-form-field id="year">
+    <input
+      type="text"
+      matInput
+      placeholder="Year"
+      formControlName="stateGroup"
+      required
+      [matAutocomplete]="autoGroup"
+    >
+    <mat-autocomplete #autoGroup="matAutocomplete">
+      <mat-optgroup
+        *ngFor="let group of stateGroupOptions | async"
+        [label]="group.letter"
+      >
+        <mat-option
+          *ngFor="let name of group.names"
+          [value]="name"
+        >
+          {{name}}
+        </mat-option>
+      </mat-optgroup>
+    </mat-autocomplete>
+  </mat-form-field>
+</mat-toolbar>
