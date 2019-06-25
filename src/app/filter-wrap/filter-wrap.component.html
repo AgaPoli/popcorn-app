@@ -1,26 +1,18 @@
-<p class="testx">primary</p>
-<p class="testy">primary-dark</p>
-<p class="testa">accent</p>
-
 <mat-toolbar 
 color="primary"
 >
-<button id="all_mowies_and_tv"  mat-button>All</button>
-<button id="all_mowies"  mat-button>Movies</button>
-<button id="all_tv_shows"  mat-button>TV Shows</button>
+
+<mat-button-toggle-group id="categories" name="filtrCategory">
+  <mat-button-toggle value="all" color="primary">All</mat-button-toggle>
+  <mat-button-toggle value="movies">Movies</mat-button-toggle>
+  <mat-button-toggle value="tv_serials">TV Serials</mat-button-toggle>
+</mat-button-toggle-group>
+
 <button id="filters"  mat-button><i class="fas fa-filter"></i>
   FILTERS</button>
 
-<mat-form-field id="release_year">
-    <input type="text" matInput placeholder="Release year" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
-      <mat-autocomplete #autoGroup="matAutocomplete">
-        <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
-          <mat-option *ngFor="let name of group.names" [value]="name">
-            {{name}}
-          </mat-option>
-      </mat-optgroup>
-    </mat-autocomplete>
-  </mat-form-field>
+<app-release-year id="release_year"></app-release-year>
+   
 
   <mat-form-field id="genres">
       <input type="text" matInput placeholder="Genres" formControlName="stateGroup" required [matAutocomplete]="autoGroup">

@@ -1,0 +1,16 @@
+input {
+ width:450px;
+ background-image: url(https://image.flaticon.com/icons/png/512/55/55369.png);
+ background-repeat: no-repeat;
+ background-position: right;
+ background-size: 20px;
+ border-radius: 15px;
+
+ transition: border-color  0.2s linear;
+ border: solid 2px transparent;
+
+&:focus {
+    border: solid 2px red;
+}
+ 
+}

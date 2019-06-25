@@ -48,6 +48,8 @@ import { DetailsSlideComponent } from './details-slide/details-slide.component';
 import { DetailsPhotoComponent } from './details-photo/details-photo.component';
 import { DetailsInfosComponent } from './details-infos/details-infos.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchComponent } from './navbar/search/search.component';
+import { ReleaseYearComponent } from './filter-wrap/release-year/release-year.component';
 
 @NgModule({
   exports:[ MatAutocompleteModule,
@@ -94,7 +96,11 @@ import { FooterComponent } from './footer/footer.component';
     DetailsSlideComponent,
     DetailsPhotoComponent,
  
-    FooterComponent
+    FooterComponent,
+ 
+    SearchComponent,
+ 
+    ReleaseYearComponent
   ],
   imports: [
     BrowserModule,

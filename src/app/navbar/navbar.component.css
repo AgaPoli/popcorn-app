@@ -1,0 +1,85 @@
+mat-toolbar {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "logo btn_group search search_button account_btn menu_btn";
+  -ms-grid-columns: 1fr 4fr 4fr 0.3fr 0.3fr;
+      grid-template-columns: 1fr 4fr 4fr 0.3fr 0.3fr;
+  grid-column-gap: 1em;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fac833;
+  height: 5em;
+}
+
+mat-toolbar #logo {
+  max-height: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+}
+
+mat-toolbar #new_movie1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: new_movie1;
+}
+
+mat-toolbar #new_movie2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: new_movie2;
+}
+
+mat-toolbar #new_movie3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: new_movie3;
+}
+
+mat-toolbar #search {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: search;
+  width: 100%;
+}
+
+mat-toolbar #search_button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: search;
+  float: right;
+}
+
+mat-toolbar #account_btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: account_btn;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+mat-toolbar #menu_btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: menu_btn;
+}
+
+mat-toolbar #btn_group {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "new_movie1 new_movie2 new_movie3";
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+/*# sourceMappingURL=navbar.component.css.map */

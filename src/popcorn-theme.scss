@@ -25,6 +25,7 @@ $popcorn-app-theme: mat-light-theme($popcorn-app-primary, $popcorn-app-accent, $
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($popcorn-app-theme);
+
 :root{
     --popcorn-primary: #FFC107;
     --popcorn-primary-dark: darken(#FFC107, 0.2);

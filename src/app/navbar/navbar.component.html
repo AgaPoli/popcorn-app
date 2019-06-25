@@ -1,19 +1,18 @@
 <mat-toolbar >
     <img id="logo" src="assets/images/1.2.jpg" alt="Logo">
    
-   
    <span id="btn_group">
         <button id="new_movie1"  mat-button>NEW</button>
         <button id="new_movie2"  mat-button>POPULAR</button>
         <button id="new_movie3"  mat-button>WATCHLIST</button>
     </span > 
    
-
+    <app-search id="search"></app-search>
     <!-- https://material.angular.io/components/form-field/api -->
-    <mat-form-field id="search">
+    <!-- <mat-form-field id="search">
         <input matInput type="text" placeholder="Search for movies">
         <mat-icon color="secondary" matSuffix >search</mat-icon>
-    </mat-form-field>
+    </mat-form-field> -->
 
     <button id="account_btn" mat-icon-button aria-label="Account">
         <mat-icon>account_circle</mat-icon>
@@ -24,4 +23,3 @@
     </button>
 
 </mat-toolbar>
-<hr>

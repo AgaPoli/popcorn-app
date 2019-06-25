@@ -1,10 +1,12 @@
 body {
-    font-family: Open Sans,Arial,sans-serif;
+    font-family: 'Swanky and Moo Moo', cursive;
     font-size: 14px;
+    
 }
     .main-wraper{
         display: grid;
         grid-template-areas: "toolbar toolbar toolbar toolbar" "main_contnent main_contnent main_contnent main_contnent";
+        margin: 0 20px;
     }
 
     app-filter-wrap{
