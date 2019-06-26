@@ -50,6 +50,9 @@ import { DetailsInfosComponent } from './details-infos/details-infos.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './navbar/search/search.component';
 import { ReleaseYearComponent } from './filter-wrap/release-year/release-year.component';
+import { GenresComponent } from './filter-wrap/genres/genres.component';
+import { RatingComponent } from './filter-wrap/rating/rating.component';
+import { YearComponent } from './filter-wrap/year/year.component';
 
 @NgModule({
   exports:[ MatAutocompleteModule,
@@ -100,7 +103,13 @@ import { ReleaseYearComponent } from './filter-wrap/release-year/release-year.co
  
     SearchComponent,
  
-    ReleaseYearComponent
+    ReleaseYearComponent,
+ 
+    GenresComponent,
+ 
+    RatingComponent,
+ 
+    YearComponent
   ],
   imports: [
     BrowserModule,
