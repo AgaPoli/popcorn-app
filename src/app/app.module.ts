@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './homepage/navbar/navbar.component';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -48,11 +48,12 @@ import { DetailsSlideComponent } from './details-slide/details-slide.component';
 import { DetailsPhotoComponent } from './details-photo/details-photo.component';
 import { DetailsInfosComponent } from './details-infos/details-infos.component';
 import { FooterComponent } from './footer/footer.component';
-import { SearchComponent } from './navbar/search/search.component';
+import { SearchComponent } from './homepage/navbar/search/search.component';
 import { ReleaseYearComponent } from './filter-wrap/release-year/release-year.component';
 import { GenresComponent } from './filter-wrap/genres/genres.component';
 import { RatingComponent } from './filter-wrap/rating/rating.component';
 import { YearComponent } from './filter-wrap/year/year.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   exports:[ MatAutocompleteModule,
@@ -109,7 +110,9 @@ import { YearComponent } from './filter-wrap/year/year.component';
  
     RatingComponent,
  
-    YearComponent
+    YearComponent,
+ 
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
