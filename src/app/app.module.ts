@@ -42,17 +42,17 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
-import { FilterWrapComponent } from './filter-wrap/filter-wrap.component';
-import { MainContentComponent } from './main-content/main-content.component';
+import { FilterWrapComponent } from './homepage/filter-wrap/filter-wrap.component';
+import { MainContentComponent } from './homepage/main-content/main-content.component';
 import { DetailsSlideComponent } from './details-slide/details-slide.component';
 import { DetailsPhotoComponent } from './details-photo/details-photo.component';
 import { DetailsInfosComponent } from './details-infos/details-infos.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './homepage/navbar/search/search.component';
-import { ReleaseYearComponent } from './filter-wrap/release-year/release-year.component';
-import { GenresComponent } from './filter-wrap/genres/genres.component';
-import { RatingComponent } from './filter-wrap/rating/rating.component';
-import { YearComponent } from './filter-wrap/year/year.component';
+import { ReleaseYearComponent } from './homepage/filter-wrap/release-year/release-year.component';
+import { GenresComponent } from './homepage/filter-wrap/genres/genres.component';
+import { RatingComponent } from './homepage/filter-wrap/rating/rating.component';
+
 import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
@@ -110,7 +110,7 @@ import { HomepageComponent } from './homepage/homepage.component';
  
     RatingComponent,
  
-    YearComponent,
+    
  
     HomepageComponent
   ],

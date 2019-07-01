@@ -5,7 +5,7 @@
 
 mat-toolbar{
   display: grid;
-  grid-template-areas: "categories filters release_year genres rating year";
+  grid-template-areas: "categories filters release_year genres rating ";
   grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 1em;
   font-size: 1em;
@@ -32,9 +32,7 @@ mat-toolbar{
   #rating {
     grid-area: rating;
   }
-  #year {
-    grid-area: year;
-  }
+ 
 
 
 }

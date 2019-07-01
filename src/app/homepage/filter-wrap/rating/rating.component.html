@@ -1,0 +1,10 @@
+<button mat-button [matMenuTriggerFor]="menu">Raiting</button>
+<mat-menu #menu="matMenu">
+  <h2>Raiting</h2>
+  <button mat-flat-button (click)="yearRelease.value = 1980">Reset</button>
+  <span>IMDb</span>
+  <mat-slider #yearRelease min="0" max="10" thumbLabel="true"></mat-slider>
+
+  <span>IMDb</span>
+  <mat-slider #yearRelease min="0" max="10" thumbLabel="true"></mat-slider>
+</mat-menu>
