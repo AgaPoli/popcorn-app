@@ -1,6 +1,5 @@
-
 // Themes
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 
 // Plus imports for other components in your app.
 
@@ -13,13 +12,17 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $popcorn-app-primary: mat-palette($mat-amber);
-$popcorn-app-accent: mat-palette($mat-grey);
+$popcorn-app-accent: mat-palette($mat-orange);
 
 // The warn palette is optional (defaults to red).
 $popcorn-app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$popcorn-app-theme: mat-light-theme($popcorn-app-primary, $popcorn-app-accent, $popcorn-app-warn);
+$popcorn-app-theme: mat-light-theme(
+  $popcorn-app-primary,
+  $popcorn-app-accent,
+  $popcorn-app-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -27,30 +30,41 @@ $popcorn-app-theme: mat-light-theme($popcorn-app-primary, $popcorn-app-accent, $
 @include angular-material-theme($popcorn-app-theme);
 
 @mixin mix-app-theme($app-theme) {
-    $primary: map-get($app-theme, primary);
-    $accent: map-get($app-theme, accent);
+  $primary: map-get($app-theme, primary);
+  $accent: map-get($app-theme, accent);
+  $warn: map-get($app-theme, warn);
 
-    :root {
-        --popcorn-primary: #{mat-color($primary)};
-        --popcorn-primary-dark: #{mat-color($accent, darker)};
-        --popcorn-accent: #{mat-color($accent)};
-        --popcorn-warn: #{mat-color($accent)};
-    }
-    .mat-button-toggle {
-        background-color: mat-color($primary);
-        color: mat-color($primary, default-contrast);
-      }
-    
-       .mat-button-toggle-checked {
-        background-color: mat-color($accent);
-        color: mat-color($accent, darker-contrast);
-      }
-    }
-    
-     @include mix-app-theme($popcorn-app-theme);
-    
-     html,
-    body {
-      height: 100%;
-      background-color: var(--popcorn-primary);
-    }
+  :root {
+    --popcorn-primary: #{mat-color($primary)};
+    --popcorn-primary-dark: #{mat-color($accent, darker)};
+    --popcorn-accent: #{mat-color($accent)};
+    --popcorn-warn: #{mat-color($warn)};
+  }
+  .mat-menu-content {
+    background-color: mat-color($primary);
+  }
+  .mat-button-toggle {
+    background-color: mat-color($primary);
+    color: mat-color($primary, lighter-contrast);
+  }
+
+  .mat-button-toggle-checked {
+    background-color: mat-color($accent);
+    color: mat-color($accent, darker-contrast);
+  }
+}
+
+@include mix-app-theme($popcorn-app-theme);
+
+html,
+body {
+  height: 100%;
+  background-color: var(--popcorn-primary);
+
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+  }
+}

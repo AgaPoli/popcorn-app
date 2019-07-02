@@ -1,0 +1,32 @@
+// ::ng-deep .release-year {
+    ::ng-deep  mat-menu-content{
+
+        display: grid;
+        grid-template-areas:
+        "title title title reset"   
+        "startYear slider slider endYear"
+        "btn1 btn1 btn2 btn2";
+   // }
+     
+    .reset {
+        grid-area: reset;
+    }
+    .startYear {
+        grid-area: startYear;
+    }
+    .slider {
+        grid-area: slider;
+    }
+    .endYear {
+        grid-area: endYear;
+    }
+    
+    .thisYearBtn {
+        grid-area: btn1;
+    }
+    
+    .lastYearBtn {
+        grid-area: btn2;
+    }
+    
+ }

@@ -1,0 +1,19 @@
+mat-button-toggle-group {
+  --border-size: .5px;
+
+  box-shadow: none;
+  mat-button-toggle {
+    border: var(--border-size) solid black;
+    transition: all 0.5s;
+    border-right: none;
+
+    &:active {
+      color: white;
+      outline: none;
+      box-shadow: none;
+    }
+    &:last-child{
+      border-right: var(--border-size) solid black;
+    }
+  }
+}

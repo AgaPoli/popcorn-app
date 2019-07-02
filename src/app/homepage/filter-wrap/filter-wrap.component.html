@@ -1,10 +1,6 @@
 <mat-toolbar color="primary">
 
-<mat-button-toggle-group  appearance="legacy" id="categories" name="filtrCategory">
-  <mat-button-toggle value="all" color="primary">All</mat-button-toggle>
-  <mat-button-toggle value="movies">Movies</mat-button-toggle>
-  <mat-button-toggle value="tv_serials">TV Serials</mat-button-toggle>
-</mat-button-toggle-group>
+  <app-button-group id="button-group"></app-button-group>
 
 <button id="filters"  mat-button><i class="fas fa-filter"></i>
   FILTERS</button>
@@ -14,7 +10,7 @@
  <app-genres id="genres"></app-genres>
    
 <app-rating id="rating"></app-rating>
-  
+
 
         
 </mat-toolbar>
