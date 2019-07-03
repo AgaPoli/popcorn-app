@@ -3,9 +3,11 @@ mat-button-toggle-group {
 
   box-shadow: none;
   mat-button-toggle {
-    border: var(--border-size) solid black;
+    border: var(--border-size) solid #6d6d6d;
     transition: all 0.5s;
     border-right: none;
+    color: #6d6d6d;
+    background-color: #212121;
 
     &:active {
       color: white;
@@ -13,7 +15,7 @@ mat-button-toggle-group {
       box-shadow: none;
     }
     &:last-child{
-      border-right: var(--border-size) solid black;
+      border-right: var(--border-size) solid #6d6d6d;
     }
   }
 }

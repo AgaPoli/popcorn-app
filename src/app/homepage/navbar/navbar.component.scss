@@ -5,7 +5,8 @@ mat-toolbar {
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
-  background-color: rgb(250, 200, 51);
+  background-color: black;
+
   height: 3em;  
 
   #logo {
@@ -43,10 +44,12 @@ mat-toolbar {
     grid-area: account_btn;
     justify-self: center;
     align-self: center;
+    color: white;
   }
 
   #menu_btn {
     grid-area: menu_btn;
+    color: white;
   }
 
 #btn_group{
@@ -57,6 +60,10 @@ mat-toolbar {
   justify-items: center;
   align-items: center;
   width: 100%;
+  color: white;
+  &:hover{
+    color: #F4FF81;
+  }
 }
  
 }

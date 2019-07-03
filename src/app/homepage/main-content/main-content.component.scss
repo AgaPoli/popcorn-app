@@ -2,10 +2,10 @@
 width: 100%;
 padding-bottom: 42%;
 background-color: var(--popcorn-primary);
-
+background-image: url("https://images.justwatch.com/poster/86829625/s166");
 
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    padding: 0 10em 0 10em;
+grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    
     justify-items: center;
 }

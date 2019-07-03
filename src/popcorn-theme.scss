@@ -11,8 +11,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$popcorn-app-primary: mat-palette($mat-amber);
-$popcorn-app-accent: mat-palette($mat-orange);
+$popcorn-app-primary: mat-palette($mat-gray, 800);
+$popcorn-app-accent: mat-palette($mat-yellow, 500);
 
 // The warn palette is optional (defaults to red).
 $popcorn-app-warn: mat-palette($mat-red);
@@ -37,6 +37,7 @@ $popcorn-app-theme: mat-light-theme(
   :root {
     --popcorn-primary: #{mat-color($primary)};
     --popcorn-primary-dark: #{mat-color($accent, darker)};
+    --popcorn-primary-light: #{mat-color($accent, lighter)};
     --popcorn-accent: #{mat-color($accent)};
     --popcorn-warn: #{mat-color($warn)};
   }
@@ -60,11 +61,12 @@ html,
 body {
   height: 100%;
   background-color: var(--popcorn-primary);
-
+  color: var(-popcorn-primary-light);
   button:focus,
   input:focus,
   select:focus,
   textarea:focus {
     outline: none;
+    
   }
 }

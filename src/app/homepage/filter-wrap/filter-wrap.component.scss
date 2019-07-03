@@ -1,6 +1,7 @@
 .main-wraper{
   max-width: 750px;
   margin: 0 20vh;
+ 
 }
 
 mat-toolbar{
@@ -9,8 +10,8 @@ mat-toolbar{
   grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 1em;
   font-size: 1em;
- 
-
+  background-color: #212121;
+ color:#6d6d6d;
   #categories {
     grid-area: categories;
     
