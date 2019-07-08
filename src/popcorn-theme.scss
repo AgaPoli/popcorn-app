@@ -36,8 +36,8 @@ $popcorn-app-theme: mat-light-theme(
 
   :root {
     --popcorn-primary: #{mat-color($primary)};
-    --popcorn-primary-dark: #{mat-color($accent, darker)};
-    --popcorn-primary-light: #{mat-color($accent, lighter)};
+    --popcorn-primary-dark: #{mat-color($accent, darker-contrast)};
+    --popcorn-primary-light: #{mat-color($accent, default-contrast)};
     --popcorn-accent: #{mat-color($accent)};
     --popcorn-warn: #{mat-color($warn)};
   }
