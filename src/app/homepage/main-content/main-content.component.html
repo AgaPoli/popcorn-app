@@ -1,5 +1,6 @@
 <div id="image_container">
-  <div *ngFor="let movie of movies" >
-    {{movie}}
+  <div *ngFor="let movie of popularMovies" class="title-poster">
+    <!-- <span class="title">{{movie.title}}</span>  -->
+    <img [src]="getImagePath(movie.poster_path)">
   </div>
 </div>

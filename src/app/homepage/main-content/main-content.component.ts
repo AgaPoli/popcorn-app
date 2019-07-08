@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-main-content',
@@ -6,22 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-content.component.scss']
 })
 export class MainContentComponent implements OnInit {
-movies = [
-'movie1',
-'movie2',
-'movie3',
-'movie4',
-'movie5',
-'movie6',
-'movie7',
-'movie8',
-'movie9',
-'movie10',
-'movie11'
-];
-  constructor() { }
+ 
+popularMovies: any;
 
-  ngOnInit() {
-  }
+constructor(private apiService: ApiService) { }
+
+ngOnInit() {
+
+  this.apiService.getPopular()
+  .then( data => {
+    console.log(data);
+    this.popularMovies = data.results;
+  });
+
+}
+
+getImagePath(posterPath: string): string{
+  return environment.urlImageApi+posterPath;
+}
 
 }
