@@ -55,6 +55,7 @@ import { RatingComponent } from './homepage/filter-wrap/rating/rating.component'
 
 import { HomepageComponent } from './homepage/homepage.component';
 import { ButtonGroupComponent } from './homepage/filter-wrap/button-group/button-group.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
   exports:[ MatAutocompleteModule,
@@ -117,7 +118,11 @@ import { ButtonGroupComponent } from './homepage/filter-wrap/button-group/button
  
     
  
-    ButtonGroupComponent
+    ButtonGroupComponent,
+ 
+    
+ 
+    MovieComponent
   ],
   imports: [
     BrowserModule,
