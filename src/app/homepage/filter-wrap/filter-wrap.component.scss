@@ -1,23 +1,20 @@
-.main-wraper{
+.main-wraper {
   max-width: 750px;
   margin: 0 20vh;
- 
 }
 
-mat-toolbar{
+mat-toolbar {
   display: grid;
   grid-template-areas: "categories filters release_year genres rating ";
   grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 1em;
   font-size: 1em;
   background-color: #212121;
- color:#6d6d6d;
+  color: #6d6d6d;
+  padding: 0 var(--global-padding);
   #categories {
     grid-area: categories;
-    
   }
- 
-  
 
   #filters {
     grid-area: filters;
@@ -33,7 +30,4 @@ mat-toolbar{
   #rating {
     grid-area: rating;
   }
- 
-
-
 }

@@ -1,7 +1,9 @@
 <div *ngIf="movie">
-  <h1>{{movie.title}}</h1>
-  <p>
-    {{movie.overview}}
-  </p> 
-  <img [src]="getImagePath(movie.poster_path)">
+
+  <app-details-slide [productionCompanies]="movie.production_companies"></app-details-slide>
+  <h4 *ngFor="let language of movie.spoken_languages">{{ language.name }}</h4>
+  <a [href]="movie.homepage"><h1> {{ movie.title }} </h1></a>
+  <app-details-infos [src]="movie.overview"></app-details-infos>
+  <app-details-photo [src]="getImagePath(movie.poster_path)"></app-details-photo>
+ 
 </div>

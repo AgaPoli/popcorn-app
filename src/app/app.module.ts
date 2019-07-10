@@ -44,9 +44,9 @@ import {
 } from '@angular/material';
 import { FilterWrapComponent } from './homepage/filter-wrap/filter-wrap.component';
 import { MainContentComponent } from './homepage/main-content/main-content.component';
-import { DetailsSlideComponent } from './details-slide/details-slide.component';
-import { DetailsPhotoComponent } from './details-photo/details-photo.component';
-import { DetailsInfosComponent } from './details-infos/details-infos.component';
+import { DetailsSlideComponent } from './components/movie/details-slide/details-slide.component';
+import { DetailsPhotoComponent } from './components/movie/details-photo/details-photo.component';
+import { DetailsInfosComponent } from './components/movie/details-infos/details-infos.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './homepage/navbar/search/search.component';
 import { ReleaseYearComponent } from './homepage/filter-wrap/release-year/release-year.component';
@@ -59,7 +59,7 @@ import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
   exports:[ MatAutocompleteModule,
-    MatBadgeModule,
+    MatBadgeModule, 
     MatBottomSheetModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -100,28 +100,15 @@ import { MovieComponent } from './components/movie/movie.component';
     FilterWrapComponent,
     MainContentComponent,
     DetailsSlideComponent,
+    DetailsInfosComponent,
     DetailsPhotoComponent,
- 
     FooterComponent,
- 
     SearchComponent,
- 
     ReleaseYearComponent,
- 
     GenresComponent,
- 
     RatingComponent,
- 
-    
- 
     HomepageComponent,
- 
-    
- 
     ButtonGroupComponent,
- 
-    
- 
     MovieComponent
   ],
   imports: [

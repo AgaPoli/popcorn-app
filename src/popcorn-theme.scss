@@ -59,14 +59,24 @@ $popcorn-app-theme: mat-light-theme(
 
 html,
 body {
+  
+  @media only screen and (min-width: 1000px) {
+    --global-padding: 7em;
+  }
+  @media only screen and (min-width: 600px) {
+    --global-padding: 5em;
+  }
+  @media only screen and (max-width: 600px) {
+    --global-padding: 2em;
+  }
+
   height: 100%;
   background-color: var(--popcorn-primary);
-  color: var(-popcorn-primary-light);
+  color: var(--popcorn-primary-light);
   button:focus,
   input:focus,
   select:focus,
   textarea:focus {
     outline: none;
-    
   }
 }
