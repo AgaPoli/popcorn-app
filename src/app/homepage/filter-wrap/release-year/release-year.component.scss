@@ -6,6 +6,7 @@
         "title title title reset"   
         "startYear slider slider endYear"
         "btn1 btn1 btn2 btn2";
+        background-color: #212121;
    // }
      
     .reset {
@@ -30,3 +31,13 @@
     }
     
  }
+
+ .release-year{
+    border: var(--border-size) solid #6d6d6d;
+    transition: all 0.5s;
+    
+    color: #6d6d6d;
+    background-color: #212121;
+    --border-size: .5px;
+    }
+

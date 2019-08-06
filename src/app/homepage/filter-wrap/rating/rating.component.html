@@ -1,10 +1,13 @@
-<button mat-button [matMenuTriggerFor]="menu">Raiting</button>
+<button class="rating" mat-button [matMenuTriggerFor]="menu">Raiting</button>
 <mat-menu #menu="matMenu">
   <h2>Raiting</h2>
+ 
   <button mat-flat-button (click)="yearRelease.value = 1980">Reset</button>
+    <img [routerLink]="['/']" id="logo" src="assets/images/imdb.png" alt="Logo">
   <span>IMDb</span>
   <mat-slider #yearRelease min="0" max="10" thumbLabel="true"></mat-slider>
 
   <span>IMDb</span>
+    <img [routerLink]="['/']" id="logo" src="assets/images/Rotten_Tomatoes.png" alt="Logo">
   <mat-slider #yearRelease min="0" max="10" thumbLabel="true"></mat-slider>
 </mat-menu>

@@ -57,6 +57,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ButtonGroupComponent } from './homepage/filter-wrap/button-group/button-group.component';
 import { MovieComponent } from './components/movie/movie.component';
 
+
 @NgModule({
   exports:[ MatAutocompleteModule,
     MatBadgeModule, 

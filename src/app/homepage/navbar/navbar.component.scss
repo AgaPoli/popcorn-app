@@ -12,6 +12,9 @@ mat-toolbar {
   #logo {
     max-height: 100%;
     grid-area: logo;
+    border-radius: 15px;
+   padding: 6px;
+   
   }
 
   #new_movie1 {

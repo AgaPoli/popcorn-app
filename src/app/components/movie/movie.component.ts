@@ -27,8 +27,7 @@ export class MovieComponent implements OnInit {
         this.getMovie(this.id)
         }
     );
-    
-    }
+      }
     
     getMovie(id: number){
       this.apiService.getMovie(id)

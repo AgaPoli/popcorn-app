@@ -1,0 +1,18 @@
+ 
+ .rating{
+    border: var(--border-size) solid #6d6d6d;
+    transition: all 0.5s;
+    
+    color: #6d6d6d;
+    background-color: #212121;
+    --border-size: .5px;}
+
+   #logo{
+      
+    max-height: 50px;
+    grid-area: logo;
+    border-radius: 15px;
+   padding: 6px;
+   
+  }  
+    
