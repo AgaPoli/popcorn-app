@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './homepage/navbar/navbar.component';
+import { NavbarComponent } from './components/homepage/navbar/navbar.component';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -42,20 +42,21 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
-import { FilterWrapComponent } from './homepage/filter-wrap/filter-wrap.component';
-import { MainContentComponent } from './homepage/main-content/main-content.component';
+import { FilterWrapComponent } from './components/homepage/filter-wrap/filter-wrap.component';
+import { MainContentComponent } from './components/homepage/main-content/main-content.component';
 import { DetailsSlideComponent } from './components/movie/details-slide/details-slide.component';
 import { DetailsPhotoComponent } from './components/movie/details-photo/details-photo.component';
 import { DetailsInfosComponent } from './components/movie/details-infos/details-infos.component';
-import { FooterComponent } from './footer/footer.component';
-import { SearchComponent } from './homepage/navbar/search/search.component';
-import { ReleaseYearComponent } from './homepage/filter-wrap/release-year/release-year.component';
-import { GenresComponent } from './homepage/filter-wrap/genres/genres.component';
-import { RatingComponent } from './homepage/filter-wrap/rating/rating.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SearchComponent } from './components/homepage/navbar/search/search.component';
+import { ReleaseYearComponent } from './components/homepage/filter-wrap/release-year/release-year.component';
+import { GenresComponent } from './components/homepage/filter-wrap/genres/genres.component';
+import { RatingComponent } from './components/homepage/filter-wrap/rating/rating.component';
 
-import { HomepageComponent } from './homepage/homepage.component';
-import { ButtonGroupComponent } from './homepage/filter-wrap/button-group/button-group.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { ButtonGroupComponent } from './components/homepage/filter-wrap/button-group/button-group.component';
 import { MovieComponent } from './components/movie/movie.component';
+import { PosterComponent } from './components/poster/poster.component';
 
 
 @NgModule({
@@ -110,7 +111,8 @@ import { MovieComponent } from './components/movie/movie.component';
     RatingComponent,
     HomepageComponent,
     ButtonGroupComponent,
-    MovieComponent
+    MovieComponent,
+    PosterComponent
   ],
   imports: [
     BrowserModule,
