@@ -13,7 +13,7 @@ export class ApiService {
     return environment.urlImageApi+posterPath;
   }
 
-  getPopular(): Promise<any>{
+  getPopular(): Observable<any>{
     // https://api.themoviedb.org/3/movie/popular?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
     return this.httpClient.get(
@@ -23,10 +23,7 @@ export class ApiService {
           api_key: environment.apiKey
         }
       }
-    ).toPromise()
-    .then(data => data)
-    .catch(error => {console.log(error)})
-
+    );
   }
 
   getMovie(movie_id: number): Promise<any>{

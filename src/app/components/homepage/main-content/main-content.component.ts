@@ -14,13 +14,9 @@ popularMovies: any;
 constructor(private apiService: ApiService) { }
 
 ngOnInit() {
-
-  this.apiService.getPopular()
-  .then( data => {
-    console.log(data);
+  this.apiService.getPopular().subscribe((data: any) => {
     this.popularMovies = data.results;
   });
-
 }
 
 getImagePath(posterPath: string): string{
