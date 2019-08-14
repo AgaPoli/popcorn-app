@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { PopularMoviesResultType } from './Types/popular.movies.result';
+import { MovieListType } from './Types/movie.list.type';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +17,7 @@ export class ApiService {
     return environment.urlImageApi+posterPath;
   }
 
-  getPopular(): Observable<any>{
+  getPopular(): Observable<PopularMoviesResultType>{
     // https://api.themoviedb.org/3/movie/popular?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
     return this.httpClient.get(
@@ -23,6 +27,10 @@ export class ApiService {
           api_key: environment.apiKey
         }
       }
+    ).pipe(
+      map((data) => {
+        return data as PopularMoviesResultType;
+      })
     );
   }
 
