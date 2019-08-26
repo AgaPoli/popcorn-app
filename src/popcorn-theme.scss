@@ -61,7 +61,7 @@ html,
 body {
   
   @media only screen and (min-width: 1000px) {
-    --global-padding: 7em;
+    --global-padding: 8em;
   }
   @media only screen and (min-width: 600px) {
     --global-padding: 5em;
@@ -79,4 +79,5 @@ body {
   textarea:focus {
     outline: none;
   }
+  
 }

@@ -2,9 +2,10 @@
   <app-button-group id="button-group"></app-button-group>
   <button id="filters"  mat-button><i class="fas fa-filter"></i>
     FILTERS</button>
-  <app-release-year id="release_year"></app-release-year>
-  <app-genres id="genres"></app-genres>
-  <app-rating id="rating"></app-rating>
+  <app-release-year id="release_year" class="c-btn"></app-release-year>
+  <app-genres id="genres" class="c-btn"></app-genres>
+  <app-rating id="rating" class="c-btn"></app-rating>
+  <button id="reset"mat-flat-button (click)="yearRelease.value = 1980">Reset</button>
 </mat-toolbar>
 
 

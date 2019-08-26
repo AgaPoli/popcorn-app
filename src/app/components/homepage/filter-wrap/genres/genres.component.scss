@@ -1,7 +1,9 @@
-.genres{
-    border: var(--border-size) solid #6d6d6d;
+.mat-stroked-button {
     transition: all 0.5s;
-    
-    color: #6d6d6d;
-    background-color: #212121;
-    --border-size: .5px;}
+    color: rgb(205, 205, 206);
+    border-radius: 0;
+    font-size: 1em;
+    font-weight: 400;
+    border: 0.5px solid #2e2e2e;
+    margin: 4px;
+  }

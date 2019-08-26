@@ -3,19 +3,26 @@ mat-button-toggle-group {
 
   box-shadow: none;
   mat-button-toggle {
-    border: var(--border-size) solid #6d6d6d;
+    border: var(--border-size) solid rgb(205, 205, 206);
     transition: all 0.5s;
     border-right: none;
-    color: #6d6d6d;
+    color: rgb(205, 205, 206);
     background-color: #212121;
 
     &:active {
-      color: white;
+      color: rgb(205, 205, 206);
       outline: none;
       box-shadow: none;
     }
     &:last-child{
-      border-right: var(--border-size) solid #6d6d6d;
+      border-right: var(--border-size) solid rgb(205, 205, 206);
     }
   }
 }
+.nav_btn {
+  color:rgb(205, 205, 206);
+   border-radius: 0;
+   &:hover {
+    border-bottom: 4px solid #fcb500;
+}}
+

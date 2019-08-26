@@ -1,20 +1,18 @@
 mat-toolbar {
   display: grid;
-  grid-template-areas: "logo btn_group search account_btn menu_btn";
+  grid-template-areas: " logo  btn_group search account_btn menu_btn ";
   grid-template-columns: 1fr 4fr 4fr 0.3fr 0.3fr;
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
-  background-color: black;
-
-  height: 3em;  
-
+  background-color: #0d0d0d;
+  height: 49px;
+  padding-left: 15px;
   #logo {
     max-height: 100%;
     grid-area: logo;
-    border-radius: 15px;
-   padding: 6px;
-   
+    border-radius: 10px;
+    padding: 6px;
   }
 
   #new_movie1 {
@@ -32,10 +30,15 @@ mat-toolbar {
   #search {
     grid-area: search;
     width: 100%;
-    background-color:white;
-    max-height: 70%;
-    border-radius: 10px;
+    background-color: white;
+    max-height: 60%;
+
     color: lightslategray;
+    font-size: 16px;
+    padding-bottom: 10px;
+
+    line-height: 30px;
+    border-radius: 2px;
   }
 
   #search_button {
@@ -47,26 +50,33 @@ mat-toolbar {
     grid-area: account_btn;
     justify-self: center;
     align-self: center;
-    color: white;
+    @extend %all_btn;
   }
 
   #menu_btn {
     grid-area: menu_btn;
-    color: white;
+    @extend %all_btn;
   }
 
-#btn_group{
-  display: grid;
-  grid-template-areas: "new_movie1 new_movie2 new_movie3";
-  grid-template-columns: 1fr 1fr 1fr ;
-  grid-column-gap: 1em;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  color: white;
-  &:hover{
-    color: var(--popcorn-primary);
+  #btn_group {
+    display: grid;
+    grid-template-areas: "new_movie1 new_movie2 new_movie3";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    @extend %all_btn;
   }
 }
- 
+%all_btn {
+  color: rgb(205, 205, 206);
+}
+
+.nav_btn {
+  color: rgb(205, 205, 206);
+  border-radius: 0;
+  &:hover {
+    border-bottom: 4px solid #fcb500;
+  }
 }

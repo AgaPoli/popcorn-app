@@ -1,43 +1,53 @@
 // ::ng-deep .release-year {
-    ::ng-deep  mat-menu-content{
+::ng-deep mat-menu-content {
+  display: grid;
+  grid-template-areas:
+    "title title title reset"
+    "startYear slider slider endYear"
+    "btn1 btn1 btn2 btn2";
 
-        display: grid;
-        grid-template-areas:
-        "title title title reset"   
-        "startYear slider slider endYear"
-        "btn1 btn1 btn2 btn2";
-        background-color: #212121;
-   // }
-     
-    .reset {
-        grid-area: reset;
-    }
-    .startYear {
-        grid-area: startYear;
-    }
-    .slider {
-        grid-area: slider;
-    }
-    .endYear {
-        grid-area: endYear;
-    }
-    
-    .thisYearBtn {
-        grid-area: btn1;
-    }
-    
-    .lastYearBtn {
-        grid-area: btn2;
-    }
-    
- }
+  // }
 
- .release-year{
-    border: var(--border-size) solid #6d6d6d;
-    transition: all 0.5s;
-    
-    color: #6d6d6d;
-    background-color: #212121;
-    --border-size: .5px;
-    }
+  .reset {
+    grid-area: reset;
+    border: none;
+  }
+  .startYear {
+    grid-area: startYear;
+  }
+  .slider {
+    grid-area: slider;
+  }
+  .endYear {
+    grid-area: endYear;
+  }
 
+  .thisYearBtn {
+    grid-area: btn1;
+  }
+
+  .lastYearBtn {
+    grid-area: btn2;
+  }
+}
+
+h2 {
+  font-size: 1.125em;
+  color: rgb(205, 205, 206);
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+}
+.mat-flat-button {
+  color: #2e2e2e;
+  background: none;
+  text-transform: uppercase;
+}
+.mat-stroked-button {
+  transition: all 0.5s;
+  color: rgb(205, 205, 206);
+  border-radius: 0;
+  font-size: 1em;
+  font-weight: 400;
+  border: 1px solid #2e2e2e;;
+  margin-right: 5px;
+}

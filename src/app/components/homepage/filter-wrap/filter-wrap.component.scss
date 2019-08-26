@@ -5,12 +5,12 @@
 
 mat-toolbar {
   display: grid;
-  grid-template-areas: "categories filters release_year genres rating ";
-  grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "categories filters release_year genres rating reset ";
+  grid-template-columns: auto auto auto auto auto auto 1fr 1fr;
   grid-column-gap: 1em;
   font-size: 1em;
   background-color: #212121;
-  color: #6d6d6d;
+  color: rgb(205, 205, 206);
   padding: 0 var(--global-padding);
   #categories {
     grid-area: categories;
@@ -30,4 +30,23 @@ mat-toolbar {
   #rating {
     grid-area: rating;
   }
+  #reset {
+    grid-area: reset;
+    color:#585858;
+  }
+}
+.c-btn {
+  transition: all 0.5s;
+  color: rgb(205, 205, 206);
+  background-color: #212121;
+  font-size: 1em;
+  font-weight: 400;
+  border: 1px solid rgb(205, 205, 206);
+}
+
+
+.mat-flat-button {
+  color: rgb(205, 205, 206);
+  background: none;
+  text-transform: uppercase;
 }
