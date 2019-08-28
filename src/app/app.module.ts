@@ -57,6 +57,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { ButtonGroupComponent } from './components/homepage/filter-wrap/button-group/button-group.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { PosterComponent } from './components/poster/poster.component';
+import { ButtonComponent } from './components/shared/button/button.component';
 
 
 @NgModule({
@@ -112,7 +113,8 @@ import { PosterComponent } from './components/poster/poster.component';
     HomepageComponent,
     ButtonGroupComponent,
     MovieComponent,
-    PosterComponent
+    PosterComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

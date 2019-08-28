@@ -1,3 +1,5 @@
+@import "../../../../../popcorn-theme";
+
 // ::ng-deep .release-year {
 ::ng-deep mat-menu-content {
   display: grid;
@@ -38,7 +40,7 @@ h2 {
   letter-spacing: 0.0125em;
 }
 .mat-flat-button {
-  color: #2e2e2e;
+  color: $primary-light;
   background: none;
   text-transform: uppercase;
 }
@@ -48,6 +50,6 @@ h2 {
   border-radius: 0;
   font-size: 1em;
   font-weight: 400;
-  border: 1px solid #2e2e2e;;
+  border: 1px solid $primary-light;
   margin-right: 5px;
 }

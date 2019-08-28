@@ -1,4 +1,4 @@
-
+@import "../../../../../popcorn-theme";
 
 #logo {
   max-height: 50px;
@@ -14,12 +14,11 @@ h2 {
   letter-spacing: 0.0125em;
 }
 .mat-flat-button {
-  color: #2e2e2e;
+  color: $primary-light;
   background: none;
   text-transform: uppercase;
 }
 
 .mat-menu-panel {
   padding: 18px;
-  
 }

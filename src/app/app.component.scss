@@ -1,16 +1,16 @@
 body {
-    font-family: 'Swanky and Moo Moo', cursive;
-    font-size: 14px;
-    color:  --popcorn-primary-light;
+  font-family: "Swanky and Moo Moo", cursive;
+  font-size: 14px;
+  color: --popcorn-primary-light;
 }
-    app-filter-wrap{
-        grid-area: toolbar;
-    }
-    
-    app-main-content{
-        grid-area: main_contnent;
-    }
+app-filter-wrap {
+  grid-area: toolbar;
+}
 
-    router-outlet{
-        display: none;
-    }
+app-main-content {
+  grid-area: main_contnent;
+}
+
+router-outlet {
+  display: none;
+}

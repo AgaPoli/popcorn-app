@@ -1,16 +1,17 @@
+@import "../../../popcorn-theme";
 footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #1b1b1b;
+  background-color: $primary-dark;
 }
 
 h5 {
-  font-size: 14px;
-  color: #f4ff81;
+  font-size: $font-size-5;
+  color: $accent;
 }
 
 a {
-  font-size: 14px;
-  color: rgb(205, 205, 206);
+  font-size: $font-size-5;
+  color: $primary-font;
 }

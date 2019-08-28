@@ -1,3 +1,37 @@
+// Colors
+$primary: #212121;
+$primary-dark: #141414;
+$primary-light: #2e2e2e;
+$accent: #fcb500;
+$primary-font: #cdcecd;
+
+// Font size
+$font-size-base: 1rem;
+$font-size-1: $font-size-base * 3; // ~48px
+$font-size-2: $font-size-base * 1.5; // ~24px
+$font-size-3: $font-size-base * 1.125; // ~18px
+$font-size-4: $font-size-base * 1; // ~16px
+$font-size-5: $font-size-base * 0.875; // ~14px
+$font-size-6: $font-size-base * 0.75; // ~12px
+$font-size-7: $font-size-base * 0.625; // ~10px
+
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+$line-height-lg: 1.8;
+
+// Siatka
+$grid-base: 10px;
+$gutter: $grid-base * 1.5;
+
+// Zaokroglenia
+$border-radius: $grid-base * 0.5;
+
+// Breakpoint
+$bp-medium: "800px";
+$bp-large: "1200px";
+
+
+
 // Themes
 @import "~@angular/material/theming";
 
@@ -30,29 +64,40 @@ $popcorn-app-theme: mat-light-theme(
 @include angular-material-theme($popcorn-app-theme);
 
 @mixin mix-app-theme($app-theme) {
-  $primary: map-get($app-theme, primary);
-  $accent: map-get($app-theme, accent);
-  $warn: map-get($app-theme, warn);
+  $primary-pallet: map-get($app-theme, primary);
+  $accent-pallet: map-get($app-theme, accent);
+  $warn-pallet: map-get($app-theme, warn);
 
   :root {
-    --popcorn-primary: #{mat-color($primary)};
-    --popcorn-primary-dark: #{mat-color($accent, darker-contrast)};
-    --popcorn-primary-light: #{mat-color($accent, default-contrast)};
-    --popcorn-accent: #{mat-color($accent)};
-    --popcorn-warn: #{mat-color($warn)};
+    --popcorn-primary: #{mat-color($primary-pallet)};
+    --popcorn-primary-dark: #{mat-color($accent-pallet, darker-contrast)};
+    --popcorn-primary-light: #{mat-color($accent-pallet, default-contrast)};
+    --popcorn-accent: #{mat-color($accent-pallet)};
+    --popcorn-warn: #{mat-color($warn-pallet)};
   }
   .mat-menu-content {
-    background-color: mat-color($primary);
+    background-color: mat-color($primary-pallet);
   }
   .mat-button-toggle {
-    background-color: mat-color($primary);
-    color: mat-color($primary, lighter-contrast);
+    background-color: mat-color($primary-pallet);
+    color: mat-color($primary-pallet, lighter-contrast);
+  }
+  
+  .mat-button-toggle-checked {
+    background-color: mat-color($accent-pallet);
+    color: mat-color($accent-pallet, darker-contrast);
   }
 
-  .mat-button-toggle-checked {
-    background-color: mat-color($accent);
-    color: mat-color($accent, darker-contrast);
+  .mat-stroked-button.alfa{
+    transition: all 0.5s;
+    color: rgb(205, 205, 206);
+    border-radius: 0;
+    font-size: 1em;
+    font-weight: 400;
+    border: 0.5px solid $primary-light;
+    margin: 4px;
   }
+
 }
 
 @include mix-app-theme($popcorn-app-theme);
@@ -71,13 +116,63 @@ body {
   }
 
   height: 100%;
-  background-color: var(--popcorn-primary);
-  color: var(--popcorn-primary-light);
+  background-color: $primary-dark;
+  color: $primary-font;
   button:focus,
   input:focus,
   select:focus,
   textarea:focus {
     outline: none;
   }
-  
+  .c-btn {
+    transition: all 0.5s;
+    color: $primary-font;
+    background-color: $primary;
+    font-size: 1em;
+    font-weight: 400;
+    border: 1px solid $primary-font;
+  }
+
+  p {
+    font-size: $font-size-5;
+    font-weight: 400;
+    line-height: $line-height-base;
+    margin: 0;
+    margin-bottom: $grid-base; //10px
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: $font-size-4;
+    line-height: $line-height-base;
+    margin: 0;
+}
+ 
+a {
+    color: $primary-font;
+    text-decoration: none;
+    &:hover {
+        color: $primary-font;
+        text-decoration: underline; //ma byc podkreslnik zolty
+    }
+} 
+img {
+  max-width: 100%;
+}
+
+}
+
+//-----------mixins------------------------------------
+// Od srednich w gore
+@mixin medium-up {
+  @media (min-width: #{$bp-medium}) {
+    //800px#{}bo zapisane jako string
+    @content //(tu wstawiam dowolne deklaracje);
+  }
+}
+
+// Od duzych w gore
+@mixin large-up {
+  @media (min-width: #{$bp-large}) {
+    @content;
+  }
 }

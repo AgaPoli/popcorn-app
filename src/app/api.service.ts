@@ -28,8 +28,8 @@ export class ApiService {
         }
       }
     ).pipe(
-      map((data) => {
-        return data as PopularMoviesResultType;
+      map((data: PopularMoviesResultType) => {
+        return data;
       })
     );
   }

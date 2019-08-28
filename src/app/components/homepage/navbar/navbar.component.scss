@@ -1,3 +1,5 @@
+@import "../../../../popcorn-theme";
+
 mat-toolbar {
   display: grid;
   grid-template-areas: " logo  btn_group search account_btn menu_btn ";
@@ -5,7 +7,7 @@ mat-toolbar {
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
-  background-color: #0d0d0d;
+  background-color: $primary;
   height: 49px;
   padding-left: 15px;
   #logo {
@@ -77,6 +79,6 @@ mat-toolbar {
   color: rgb(205, 205, 206);
   border-radius: 0;
   &:hover {
-    border-bottom: 4px solid #fcb500;
+    border-bottom: 4px solid $accent;
   }
 }
