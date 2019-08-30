@@ -7,14 +7,29 @@ mat-toolbar {
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
-  background-color: $primary;
+  background-color: #212121;
   height: 49px;
-  padding-left: 15px;
+  padding: 0 15%;
+  font-size: $font-size-base;
+  
+  @media (max-width: 640px) {
+    .grid {
+      display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  padding: 8px;
+    }
+    .grid-item { display: none; }}
+    
+
+
+
   #logo {
     max-height: 100%;
     grid-area: logo;
     border-radius: 10px;
-    padding: 6px;
+    padding:  6px;
+    
   }
 
   #new_movie1 {
@@ -35,8 +50,8 @@ mat-toolbar {
     background-color: white;
     max-height: 60%;
 
-    color: lightslategray;
-    font-size: 16px;
+    color: l$primary-dark-font;
+    font-size: $font-size-base;
     padding-bottom: 10px;
 
     line-height: 30px;
@@ -72,13 +87,16 @@ mat-toolbar {
   }
 }
 %all_btn {
-  color: rgb(205, 205, 206);
+  color: $primary-dark-font;
 }
 
 .nav_btn {
-  color: rgb(205, 205, 206);
+  color: $primary-font;
   border-radius: 0;
   &:hover {
     border-bottom: 4px solid $accent;
   }
+}
+.mat-toolbar {
+  background-color: $primary-dark;
 }

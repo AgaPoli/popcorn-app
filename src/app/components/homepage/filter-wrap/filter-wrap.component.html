@@ -1,13 +1,69 @@
-<mat-toolbar >
+<mat-toolbar>
   <app-button-group id="button-group"></app-button-group>
-  <button id="filters"  mat-button><i class="fas fa-filter"></i>
+  <button id="filters" mat-button class="hide-lg-up"><i class="fas fa-filter"></i>
     FILTERS</button>
-
-
-  <app-release-year id="release_year" class="c-btn"></app-release-year>
-  <app-genres id="genres" class="c-btn"></app-genres>
-  <app-rating id="rating" class="c-btn"></app-rating>
-  <button id="reset"mat-flat-button (click)="yearRelease.value = 1980">Reset</button>
+  <app-release-year id="release_year" class="c-btn show-lg-up"></app-release-year>
+  <app-genres id="genres" class="c-btn show-lg-up"></app-genres>
+  <app-rating id="rating" class="c-btn show-lg-up"></app-rating>
+  <button id="reset" mat-flat-button (click)="yearRelease.value = 1980">Reset</button>
 </mat-toolbar>
 
 
+
+
+<!-- mobile  -->
+<!--btn group  -->
+<app-button-group id="button-group"></app-button-group>
+
+
+<!--Filters  -->
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <button id="filters" mat-button><i class="fas fa-filter"></i>
+    FILTERS</button>
+</button>
+
+<!--Relase year  -->
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <div class="release-year">
+      <button mat-button [matMenuTriggerFor]="menu">Release year</button>
+
+      <mat-menu #menu="matMenu" panelClass="release-year" backdropClass="release-year" class="alfa">
+
+        <h2>Relase year</h2>
+
+        <span class="startYear">1980</span>
+
+        <mat-slider class="slider" #yearRelease min="1980" max="2019" thumbLabel="true"></mat-slider>
+
+        <span class="endYear">2019</span>
+
+        <button mat-flat-button class="reset" (click)="yearRelease.value = 1980">Reset</button>
+
+        <button mat-stroked-button class="alfa" (click)="yearRelease.value = 2019">
+          This year
+        </button>
+
+        <button mat-stroked-button class="alfa" (click)="yearRelease.value = 1995">
+          Last year
+        </button>
+
+
+      </mat-menu>
+
+    </div>
+  </button>
+
+  <!--Genres  -->
+  <button mat-menu-item>
+    <button id="new_movie2" class="nav_btn" mat-button>POPULAR</button>
+  </button>
+
+  <!--Raiting -->
+  <button mat-menu-item disabled>
+    <button id="new_movie3" class="nav_btn" mat-button>WATCHLIST</button>
+  </button>
+  <button mat-menu-item>
+    <button id="new_movie1" class="nav_btn" mat-button>NEW</button>
+  </button>
+</mat-menu>

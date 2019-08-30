@@ -1,30 +1,31 @@
 @import "../../../../../popcorn-theme";
 
 mat-button-toggle-group {
-  --border-size: .5px;
-
+  --border-size: 0.5px;
   box-shadow: none;
   mat-button-toggle {
-    border: var(--border-size) solid rgb(205, 205, 206);
+    border: var(--border-size) solid $primary-font;
     transition: all 0.5s;
     border-right: none;
-    color: rgb(205, 205, 206);
-    background-color: #212121;
+    color: $primary-font;
+    background-color: $primary;
+    font-size: $font-size-base;
+    font-weight: 400;
 
     &:active {
-      color: rgb(205, 205, 206);
+      color: $primary-font;
       outline: none;
       box-shadow: none;
     }
-    &:last-child{
-      border-right: var(--border-size) solid rgb(205, 205, 206);
+    &:last-child {
+      border-right: var(--border-size) solid $primary-font;
     }
   }
 }
 .nav_btn {
-  color:rgb(205, 205, 206);
-   border-radius: 0;
-   &:hover {
+  color: $primary-font;
+  border-radius: 0;
+  &:hover {
     border-bottom: 4px solid $accent;
-}}
-
+  }
+}

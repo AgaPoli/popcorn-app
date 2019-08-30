@@ -10,16 +10,20 @@ mat-toolbar {
   grid-template-areas: "categories filters release_year genres rating reset ";
   grid-template-columns: auto auto auto auto auto auto 1fr 1fr;
   grid-column-gap: 1em;
-  background-color: red;
-  font-size: 1em;
+  
+  font-size: $font-size-base;
   color: $primary-font;
-  padding: 0 var(--global-padding);
+  padding: 0 15%;
+
+}
+
   #categories {
     grid-area: categories;
   }
 
   #filters {
     grid-area: filters;
+    color: $primary-dark-font;
   }
 
   #release_year {
@@ -34,12 +38,41 @@ mat-toolbar {
   }
   #reset {
     grid-area: reset;
-    color: #585858;
+    color: $primary-dark-font;
   }
-}
+
 
 .mat-flat-button {
   color: $primary-font;
   background: none;
   text-transform: uppercase;
+}
+.mat-toolbar {
+  background-color: $primary;
+  
+}
+
+
+
+#logo {
+  max-height: 50px;
+  grid-area: logo;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+h2 {
+  font-size: $font-size-3;
+  color: $primary-font;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+}
+.mat-flat-button {
+  color: $primary-dark-font;
+  background: none;
+  text-transform: uppercase;
+}
+
+.mat-menu-panel {
+  padding: 18px;
 }
