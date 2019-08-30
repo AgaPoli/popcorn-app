@@ -1,12 +1,12 @@
-<mat-toolbar >
-    <img [routerLink]="['/']" id="logo" src="assets/images/1.2.jpg" alt="Logo">
-    
-   <span id="btn_group">
+<mat-toolbar>
+    <img [routerLink]="['/']" id="logo" src="assets/images/1.2.jpg" alt="Logo" />
+
+    <span id="btn_group">
         <button id="new_movie1" class="nav_btn" mat-button>NEW</button>
         <button id="new_movie2" class="nav_btn" mat-button>POPULAR</button>
         <button id="new_movie3" class="nav_btn" mat-button>WATCHLIST</button>
-    </span > 
-   
+    </span>
+
     <app-search id="search"></app-search>
     <!-- https://material.angular.io/components/form-field/api -->
     <!-- <mat-form-field id="search">
@@ -17,9 +17,26 @@
     <button id="account_btn" mat-icon-button aria-label="Account">
         <mat-icon>account_circle</mat-icon>
     </button>
- 
-    <button id="menu_btn" mat-icon-button aria-label="Menu">
-            <mat-icon>more_vert</mat-icon>
-    </button>
 
+    <button id="menu_btn" mat-icon-button aria-label="Menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
 </mat-toolbar>
+
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>
+        <button id="new_movie1" class="nav_btn" mat-button>NEW</button>
+    </button>
+    <button mat-menu-item>
+        <button id="new_movie2" class="nav_btn" mat-button>POPULAR</button>
+    </button>
+    <button mat-menu-item disabled>
+        <button id="new_movie3" class="nav_btn" mat-button>WATCHLIST</button>
+    </button>
+    <button mat-menu-item>
+        <button id="new_movie1" class="nav_btn" mat-button>NEW</button>
+    </button>
+</mat-menu>

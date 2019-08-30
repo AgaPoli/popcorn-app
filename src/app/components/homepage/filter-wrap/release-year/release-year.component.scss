@@ -34,22 +34,14 @@
 }
 
 h2 {
-  font-size: 1.125em;
-  color: rgb(205, 205, 206);
+  font-size: $font-size-3;
+  color: $primary-font;
   font-weight: 500;
   letter-spacing: 0.0125em;
 }
 .mat-flat-button {
-  color: $primary-light;
+  color: $primary-dark-font;
   background: none;
   text-transform: uppercase;
 }
-.mat-stroked-button {
-  transition: all 0.5s;
-  color: rgb(205, 205, 206);
-  border-radius: 0;
-  font-size: 1em;
-  font-weight: 400;
-  border: 1px solid $primary-light;
-  margin-right: 5px;
-}
+

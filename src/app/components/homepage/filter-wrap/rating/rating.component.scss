@@ -8,13 +8,13 @@
 }
 
 h2 {
-  font-size: 1.125em;
-  color: rgb(205, 205, 206);
+  font-size: $font-size-3;
+  color: $primary-font;
   font-weight: 500;
   letter-spacing: 0.0125em;
 }
 .mat-flat-button {
-  color: $primary-light;
+  color: $primary-dark-font;
   background: none;
   text-transform: uppercase;
 }
