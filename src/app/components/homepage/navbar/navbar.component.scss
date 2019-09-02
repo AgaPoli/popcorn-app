@@ -7,6 +7,7 @@ mat-toolbar {
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
+<<<<<<< HEAD
   background-color: $primary-dark;
   height: 49px;
   padding: 0 15%;
@@ -40,11 +41,35 @@ mat-toolbar {
       padding: 0 7%;
     }
   }
+=======
+  background-color: #212121;
+  height: 49px;
+  padding: 0 15%;
+  font-size: $font-size-base;
+  
+  @media (max-width: 640px) {
+    .grid {
+      display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  padding: 8px;
+    }
+    .grid-item { display: none; }}
+    
+
+
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce
 
   #logo {
     max-height: 100%;
     grid-area: logo;
+<<<<<<< HEAD
     border-radius: 2px;
+=======
+    border-radius: 10px;
+    padding:  6px;
+    
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce
   }
 
   #new_movie1 {
@@ -64,7 +89,12 @@ mat-toolbar {
     width: 100%;
     background-color: white;
     max-height: 60%;
+<<<<<<< HEAD
     color: $primary-dark-font;
+=======
+
+    color: l$primary-dark-font;
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce
     font-size: $font-size-base;
     padding-bottom: 10px;
     line-height: 30px;
@@ -109,5 +139,10 @@ mat-toolbar {
   }
 }
 .mat-toolbar {
+<<<<<<< HEAD
   background-color: $primary;
 }
+=======
+  background-color: $primary-dark;
+}
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce

@@ -9,6 +9,7 @@ mat-toolbar {
   display: grid;
   grid-template-areas: "categories filters release_year genres rating reset ";
   grid-template-columns: auto auto auto auto auto auto 1fr 1fr;
+<<<<<<< HEAD
   grid-gap: 1em;
   font-size: $font-size-base;
   color: $primary-font;
@@ -18,12 +19,31 @@ mat-toolbar {
 #categories {
   grid-area: categories;
 }
+=======
+  grid-column-gap: 1em;
+  
+  font-size: $font-size-base;
+  color: $primary-font;
+  padding: 0 15%;
+
+}
+
+  #categories {
+    grid-area: categories;
+  }
+
+  #filters {
+    grid-area: filters;
+    color: $primary-dark-font;
+  }
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce
 
 #filters {
   grid-area: filters;
   color: $primary-dark-font;
 }
 
+<<<<<<< HEAD
 #release_year {
   grid-area: release_year;
 }
@@ -38,6 +58,19 @@ mat-toolbar {
   grid-area: reset;
   color: $primary-dark-font;
 }
+=======
+  #genres {
+    grid-area: genres;
+  }
+  #rating {
+    grid-area: rating;
+  }
+  #reset {
+    grid-area: reset;
+    color: $primary-dark-font;
+  }
+
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce
 
 .mat-flat-button {
   color: $primary-font;
@@ -45,9 +78,18 @@ mat-toolbar {
   text-transform: uppercase;
 }
 .mat-toolbar {
+<<<<<<< HEAD
   background-color: $primary-dark;
 }
 
+=======
+  background-color: $primary;
+  
+}
+
+
+
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce
 #logo {
   max-height: 50px;
   grid-area: logo;
@@ -70,6 +112,7 @@ h2 {
 .mat-menu-panel {
   padding: 18px;
 }
+<<<<<<< HEAD
 //phone
 @media (max-width: 599px) {
   mat-toolbar {
@@ -121,3 +164,5 @@ h2 {
     display: inline;
   }
 }
+=======
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce
