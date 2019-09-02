@@ -3,33 +3,48 @@
 mat-toolbar {
   display: grid;
   grid-template-areas: " logo  btn_group search account_btn menu_btn ";
-  grid-template-columns: 1fr 4fr 4fr 0.3fr 0.3fr;
+  grid-template-columns: 1fr 4fr 4fr 0.3fr 0.3fr 0.3fr;
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
-  background-color: #212121;
+  background-color: $primary-dark;
   height: 49px;
   padding: 0 15%;
   font-size: $font-size-base;
-  
-  @media (max-width: 640px) {
-    .grid {
+
+  @media (max-width: 599px) {
+    mat-toolbar {
       display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 8px;
-  padding: 8px;
+      grid-template-areas: "menu_btn hamburger logo account_btn menu_btn ";
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+      grid-column-gap: 1em;
+      padding: 0 7%;
     }
-    .grid-item { display: none; }}
-    
-
-
+    .btn_group {
+      display: none;
+    }
+    #search {
+      display: none;
+    }
+    #logo {
+      grid-template-columns: 4fr;
+    }
+  }
+  @media (max-width: 1200px) {
+    mat-toolbar {
+      display: grid;
+      grid-template-areas: "logo account_btn menu_btn ";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 1em;
+      font-size: $font-size-5;
+      padding: 0 7%;
+    }
+  }
 
   #logo {
     max-height: 100%;
     grid-area: logo;
-    border-radius: 10px;
-    padding:  6px;
-    
+    border-radius: 2px;
   }
 
   #new_movie1 {
@@ -49,18 +64,11 @@ mat-toolbar {
     width: 100%;
     background-color: white;
     max-height: 60%;
-
-    color: l$primary-dark-font;
+    color: $primary-dark-font;
     font-size: $font-size-base;
     padding-bottom: 10px;
-
     line-height: 30px;
     border-radius: 2px;
-  }
-
-  #search_button {
-    grid-area: search;
-    float: right;
   }
 
   #account_btn {
@@ -73,6 +81,9 @@ mat-toolbar {
   #menu_btn {
     grid-area: menu_btn;
     @extend %all_btn;
+  }
+  #hamburger {
+    grid-area: hamburger;
   }
 
   #btn_group {
@@ -98,5 +109,5 @@ mat-toolbar {
   }
 }
 .mat-toolbar {
-  background-color: $primary-dark;
+  background-color: $primary;
 }
