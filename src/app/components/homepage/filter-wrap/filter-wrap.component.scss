@@ -1,4 +1,25 @@
-@import "../../../../popcorn-theme";
+@import "../../../../variables";
+
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+  z-index:10;
+}
+// .example-container{
+//   position: absolute;
+//   background-color: transparent;
+//   width:100vh;
+//   height: 100vh;
+// }
+
+// https://www.w3schools.com/cssref/css_units.asp
 
 .main-wraper {
   max-width: 750px;
@@ -7,8 +28,11 @@
 
 mat-toolbar {
   display: grid;
-  grid-template-areas: "categories filters release_year genres rating reset ";
-  grid-template-columns: auto auto auto auto auto auto 1fr 1fr;
+  grid-template-areas: "categories filters";
+  grid-template-columns: repear(2,fr);
+  // grid-template-areas: "categories filters release_year genres rating reset ";
+  // grid-template-columns: auto auto auto auto auto auto 1fr 1fr;
+
   grid-gap: 1em;
   font-size: $font-size-base;
   color: $primary-font;
@@ -70,54 +94,56 @@ h2 {
 .mat-menu-panel {
   padding: 18px;
 }
+
 //phone
-@media (max-width: 599px) {
-  mat-toolbar {
-    display: grid;
-    grid-template-areas: "categories filters reset ";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
+// @media (max-width: 599px) {
+//   mat-toolbar {
+//     display: grid;
+//     grid-template-areas: "categories filters reset ";
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-gap: 1em;
 
-    padding: 1% 7%;
-  }
-  .show-lg-up {
-    display: none;
-  }
-}
-@media (min-width: 600px) {
-  mat-toolbar {
-    display: grid;
-    grid-template-areas: "categories filters reset ";
-    grid-template-columns: 1fr 1fr 1fr;
+//     padding: 1% 7%;
+//   }
+//   .show-lg-up {
+//     display: none;
+//   }
+// }
+// @media (min-width: 600px) {
+//   mat-toolbar {
+//     display: grid;
+//     grid-template-areas: "categories filters reset ";
+//     grid-template-columns: 1fr 1fr 1fr;
 
-    padding: 0 15%;
-  }
-  .show-lg-up {
-    display: none;
-  }
-}
-@media (min-width: 900px) {
-  mat-toolbar {
-    display: grid;
-    grid-template-areas: "categories filters reset ";
-    grid-template-columns: 1fr 1fr 1fr;
+//     padding: 0 15%;
+//   }
+//   .show-lg-up {
+//     display: none;
+//   }
+// }
+// @media (min-width: 900px) {
+//   mat-toolbar {
+//     display: grid;
+//     grid-template-areas: "categories filters reset ";
+//     grid-template-columns: 1fr 1fr 1fr;
 
-    padding: 0 15%;
-  }
-  .show-lg-up {
-    display: none;
-  }
-}
+//     padding: 0 15%;
+//   }
+//   .show-lg-up {
+//     display: none;
+//   }
+// }
 
-@media (min-width: 1200px) {
-  mat-toolbar {
-    display: grid;
-    grid-template-areas: "categories filters release_year genres rating reset ";
-    grid-template-columns: 1fr 1fr 1fr;
+// @media (min-width: 1200px) {
+//   mat-toolbar {
+//     display: grid;
+//     grid-template-areas: "categories filters release_year genres rating reset ";
+//     grid-template-columns: 1fr 1fr 1fr;
 
-    padding: 0 15%;
-  }
-  .show-lg-up {
-    display: inline;
-  }
-}
+//     padding: 0 15%;
+//   }
+//   .show-lg-up {
+//     display: inline;
+//   }
+// }
+

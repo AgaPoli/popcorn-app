@@ -1,45 +1,55 @@
-@import "../../../../popcorn-theme";
+@import "../../../../variables";
 
 mat-toolbar {
   display: grid;
-  grid-template-areas: " logo  btn_group search account_btn menu_btn ";
-  grid-template-columns: 1fr 4fr 4fr 0.3fr 0.3fr 0.3fr;
+  grid-template-areas:
+  "hamburger logo account_btn menu_btn"
+  "search search search search";
+  grid-template-columns: 1fr 4fr 0.5fr 0.5fr;
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
   background-color: $primary-dark;
-  height: 49px;
+  height: fit-content;
   padding: 0 15%;
   font-size: $font-size-base;
+}
 
-  @media (max-width: 599px) {
-    mat-toolbar {
-      display: grid;
-      grid-template-areas: "menu_btn hamburger logo account_btn menu_btn ";
-      grid-template-columns: 1fr 2fr 1fr 1fr;
-      grid-column-gap: 1em;
-      padding: 0 7%;
+
+   @media (max-width: 600px) {
+    *{
+     color:red;
     }
-    .btn_group {
-      display: none;
+  mat-toolbar {
+    grid-template-areas: "hamburger logo  account_btn menu_btn";
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+     
+     padding: 0 7%;
     }
-    #search {
-      display: none;
+   .btn_group {
+     display: none;
     }
-    #logo {
-      grid-template-columns: 4fr;
-    }
-  }
-  @media (max-width: 1200px) {
-    mat-toolbar {
-      display: grid;
-      grid-template-areas: "logo account_btn menu_btn ";
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 1em;
-      font-size: $font-size-5;
-      padding: 0 7%;
+     #search {
+     display: none;
+   }
+   #logo {
+     grid-template-columns: 4fr;
+     min-width: 100%;
     }
   }
+
+  // @media (max-width: 1200px) {
+  //   *{
+  //     color:blue;
+  //   }
+  //   mat-toolbar {
+  //     grid-template-areas: "logo account_btn menu_btn ";
+  //     grid-template-columns: 1fr 1fr 1fr;
+  //     grid-column-gap: 1em;
+  //     font-size: $font-size-5;
+  //     padding: 0 7%;
+  //   }
+  // }
 
   #logo {
     max-height: 100%;
@@ -75,39 +85,34 @@ mat-toolbar {
     grid-area: account_btn;
     justify-self: center;
     align-self: center;
-    @extend %all_btn;
   }
 
   #menu_btn {
     grid-area: menu_btn;
-    @extend %all_btn;
   }
+
   #hamburger {
     grid-area: hamburger;
+        justify-self: baseline;
   }
 
   #btn_group {
     display: grid;
     grid-template-areas: "new_movie1 new_movie2 new_movie3";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeate(3, 1fr);
     grid-column-gap: 1em;
     justify-items: center;
     align-items: center;
     width: 100%;
-    @extend %all_btn;
   }
-}
-%all_btn {
-  color: $primary-dark-font;
-}
 
-.nav_btn {
-  color: $primary-font;
-  border-radius: 0;
-  &:hover {
-    border-bottom: 4px solid $accent;
-  }
-}
-.mat-toolbar {
-  background-color: $primary;
-}
+// .nav_btn {
+//   color: $primary-font;
+//   border-radius: 0;
+//   &:hover {
+//     border-bottom: 4px solid $accent;
+//   }
+// }
+// .mat-toolbar {
+//   background-color: $primary;
+// }
