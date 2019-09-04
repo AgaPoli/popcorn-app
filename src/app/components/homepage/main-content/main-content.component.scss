@@ -9,9 +9,15 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   margin-bottom: 20px;
+<<<<<<< HEAD
   justify-items: center; 
   grid-gap: 1em ;
  
+=======
+  justify-items: center;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+>>>>>>> 18e0468691e3ea78e54fbcb07c167ad38b1c20ce
   padding: 2% 15%;
 
   // &:active {

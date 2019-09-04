@@ -28,10 +28,14 @@
 
 mat-toolbar {
   display: grid;
+
   grid-template-areas: "categories filters";
   grid-template-columns: repear(2,fr);
   // grid-template-areas: "categories filters release_year genres rating reset ";
   // grid-template-columns: auto auto auto auto auto auto 1fr 1fr;
+
+
+ 
 
   grid-gap: 1em;
   font-size: $font-size-base;
@@ -42,6 +46,18 @@ mat-toolbar {
 #categories {
   grid-area: categories;
 }
+
+
+
+  #categories {
+    grid-area: categories;
+  }
+
+  #filters {
+    grid-area: filters;
+    color: $primary-dark-font;
+  }
+
 
 #filters {
   grid-area: filters;
@@ -95,6 +111,7 @@ h2 {
   padding: 18px;
 }
 
+
 //phone
 // @media (max-width: 599px) {
 //   mat-toolbar {
@@ -146,4 +163,57 @@ h2 {
 //     display: inline;
 //   }
 // }
+
+
+//phone
+@media (max-width: 599px) {
+  mat-toolbar {
+    display: grid;
+    grid-template-areas: "categories filters reset ";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+
+    padding: 1% 7%;
+  }
+  .show-lg-up {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  mat-toolbar {
+    display: grid;
+    grid-template-areas: "categories filters reset ";
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 0 15%;
+  }
+  .show-lg-up {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  mat-toolbar {
+    display: grid;
+    grid-template-areas: "categories filters reset ";
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 0 15%;
+  }
+  .show-lg-up {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  mat-toolbar {
+    display: grid;
+    grid-template-areas: "categories filters release_year genres rating reset ";
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 0 15%;
+  }
+  .show-lg-up {
+    display: inline;
+  }
+}
 

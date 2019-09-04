@@ -106,6 +106,7 @@ mat-toolbar {
     width: 100%;
   }
 
+
 // .nav_btn {
 //   color: $primary-font;
 //   border-radius: 0;
@@ -116,3 +117,14 @@ mat-toolbar {
 // .mat-toolbar {
 //   background-color: $primary;
 // }
+
+.nav_btn {
+  color: $primary-font;
+  border-radius: 0;
+  &:hover {
+    border-bottom: 4px solid $accent;
+  }
+}
+.mat-toolbar {
+  background-color: $primary;
+}
