@@ -1,12 +1,12 @@
 <mat-toolbar>
   <app-button-group id="button-group"></app-button-group>
-  <button id="filters" mat-button class="hide-lg-up"><i class="fas fa-filter"></i>
-    FILTERS</button>
-  <app-release-year hidden id="release_year" class="c-btn show-lg-up"></app-release-year>
-  <app-genres hidden id="genres" class="c-btn show-lg-up"></app-genres>
-  <app-rating hidden id="rating" class="c-btn show-lg-up"></app-rating>
-  <button  id="reset" mat-flat-button (click)="yearRelease.value = 1980">Reset</button>
+  <button id="filters" mat-button class="hide-lg-up">
+    <i class="fas fa-filter"></i> FILTERS
+  </button>
+  <app-release-year hidden id="release_year" class="c-btn " ></app-release-year>
+  <app-genres  hidden id="genres" class="c-btn "></app-genres>
+  <app-rating hidden id="rating" class="c-btn "></app-rating>
+  <button hidden hidden id="reset" mat-flat-button (click)="yearRelease.value = 1980">
+    Reset
+  </button>
 </mat-toolbar>
-
-
-

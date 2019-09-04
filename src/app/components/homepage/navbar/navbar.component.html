@@ -1,33 +1,28 @@
 <mat-toolbar>
-
   <button id="hamburger" mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
 
+  <img [routerLink]="['/']" id="logo" src="assets/images/1.2.jpg" alt="Logo" />
 
-    <img [routerLink]="['/']" id="logo" src="assets/images/1.2.jpg" alt="Logo" />
+  <span id="btn_group">
+    <button id="new_movie1"  class="nav_btn" mat-button>NEW</button>
+    <button id="new_movie2"  class="nav_btn" mat-button>POPULAR</button>
+    <button id="new_movie3"  class="nav_btn" mat-button>WATCHLIST</button>
+  </span>
 
-
-    <span id="btn_group">
-        <button id="new_movie1" class="nav_btn" mat-button>NEW</button>
-        <button id="new_movie2" class="nav_btn" mat-button>POPULAR</button>
-        <button id="new_movie3" class="nav_btn" mat-button>WATCHLIST</button>
-
-    </span>
-
-    <app-search id="search"></app-search>
-    <!-- https://material.angular.io/components/form-field/api -->
-    <!-- <mat-form-field id="search">
+  <app-search id="search"></app-search>
+  <!-- https://material.angular.io/components/form-field/api -->
+  <!-- <mat-form-field id="search">
         <input matInput type="text" placeholder="Search for movies">
         <mat-icon color="secondary" matSuffix >search</mat-icon>
     </mat-form-field> -->
 
-    <button id="account_btn" mat-icon-button aria-label="Account">
-        <mat-icon>account_circle</mat-icon>
-    </button>
+  <button id="account_btn" mat-icon-button aria-label="Account">
+    <mat-icon>account_circle</mat-icon>
+  </button>
 
-    <button id="menu_btn" mat-icon-button aria-label="Menu">
-        <mat-icon>more_vert</mat-icon> </button>
-
+  <button id="menu_btn" mat-icon-button aria-label="Menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
 </mat-toolbar>
-

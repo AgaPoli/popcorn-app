@@ -9,10 +9,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   margin-bottom: 20px;
-  justify-items: center; 
-  grid-gap: 1em ;
- 
-  padding: 2% 15%;
+  justify-items: center;
+  grid-gap: 1em;
+
+  padding: 3%;
 
   // &:active {
   //   background: rgba(251, 226, 60, 0.5);
