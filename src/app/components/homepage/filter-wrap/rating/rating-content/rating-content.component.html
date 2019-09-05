@@ -1,0 +1,10 @@
+<h2>Raiting</h2>
+ 
+<button mat-flat-button (click)="yearRelease.value = 1980">Reset</button>
+  <img [routerLink]="['/']" id="logo" src="assets/images/imdb.png" alt="Logo">
+<span>IMDb</span>
+<mat-slider #yearRelease min="0" max="10" thumbLabel="true"></mat-slider>
+
+<span>Tomato</span>
+  <img [routerLink]="['/']" id="logo" src="assets/images/Rotten_Tomatoes.png" alt="Logo">
+<mat-slider min="0" max="10" thumbLabel="true"></mat-slider>

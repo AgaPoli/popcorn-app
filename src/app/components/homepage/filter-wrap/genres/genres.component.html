@@ -1,8 +1,4 @@
 <button class="genres" mat-button [matMenuTriggerFor]="menu">Genres</button>
 <mat-menu #menu="matMenu">
-  <!-- <template > -->
-  <button *ngFor="let genre of genres" mat-stroked-button class="alfa" >
-{{genre}}
-  </button>
-<!-- </template> -->
+  <app-genres-content></app-genres-content>
 </mat-menu>

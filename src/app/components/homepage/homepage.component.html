@@ -1,3 +1,17 @@
-<app-filter-wrap></app-filter-wrap>
-<app-main-content></app-main-content>
+<mat-sidenav-container class="example-sidenav-container" autosize hasBackdrop>
+  <mat-sidenav #snav mode="over" autoFocus fixedInViewport>
+    <div class="sidenav-content">
+      <button id="reset" class="desktop" mat-flat-button>Reset</button>
 
+      <app-release-year-content></app-release-year-content>
+      <app-rating-content></app-rating-content>
+      <app-genres-content></app-genres-content>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-button (click)="snav.toggle()">Toggle</button>
+    <app-filter-wrap></app-filter-wrap>
+    <app-main-content></app-main-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

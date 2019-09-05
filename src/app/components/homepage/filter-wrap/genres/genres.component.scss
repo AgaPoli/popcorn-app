@@ -1,1 +1,7 @@
-@import "../../../../../popcorn-theme"
+@import "../../../../../variables";
+
+span{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, .5fr));
+    grid-gap: .5em;
+}

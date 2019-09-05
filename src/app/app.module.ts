@@ -58,6 +58,9 @@ import { ButtonGroupComponent } from './components/homepage/filter-wrap/button-g
 import { MovieComponent } from './components/movie/movie.component';
 import { PosterComponent } from './components/poster/poster.component';
 import { ButtonComponent } from './components/shared/button/button.component';
+import { ReleaseYearContentComponent } from './components/homepage/filter-wrap/release-year/release-year-content/release-year-content.component';
+import { RatingContentComponent } from './components/homepage/filter-wrap/rating/rating-content/rating-content.component';
+import { GenresContentComponent } from './components/homepage/filter-wrap/genres/genres-content/genres-content.component';
 
 
 @NgModule({
@@ -114,7 +117,10 @@ import { ButtonComponent } from './components/shared/button/button.component';
     ButtonGroupComponent,
     MovieComponent,
     PosterComponent,
-    ButtonComponent
+    ButtonComponent,
+    ReleaseYearContentComponent,
+    RatingContentComponent,
+    GenresContentComponent
   ],
   imports: [
     BrowserModule,
