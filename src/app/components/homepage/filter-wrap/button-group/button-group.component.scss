@@ -3,7 +3,7 @@
 mat-button-toggle-group {
   --border-size: 0.5px;
   box-shadow: none;
-  mat-button-toggle {
+  mat-button-toggle:not(.mat-button-toggle-checked) {
     border: var(--border-size) solid $primary-font;
     transition: all 0.5s;
     border-right: none;

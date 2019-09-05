@@ -1,12 +1,38 @@
 <mat-toolbar>
   <app-button-group id="button-group"></app-button-group>
-  <button id="filters" mat-button class="hide-lg-up">
-    <i class="fas fa-filter"></i> FILTERS
+  <button id="filters" mat-button>
+    <i class="fas fa-filter "></i> FILTERS
   </button>
-  <app-release-year hidden id="release_year" class="c-btn " ></app-release-year>
-  <app-genres  hidden id="genres" class="c-btn "></app-genres>
-  <app-rating hidden id="rating" class="c-btn "></app-rating>
-  <button hidden hidden id="reset" mat-flat-button (click)="yearRelease.value = 1980">
+  <app-release-year
+    hidden
+    id="release_year"
+    class="c-btn desktop"
+  ></app-release-year>
+  <app-genres hidden id="genres" class="c-btn desktop"></app-genres>
+  <app-rating hidden id="rating" class="c-btn desktop"></app-rating>
+  <button
+    hidden
+    id="reset"
+    class="desktop"
+    mat-flat-button
+    (click)="yearRelease.value = 1980"
+  >
     Reset
   </button>
 </mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div></mat-drawer-container
+>

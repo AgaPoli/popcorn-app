@@ -29,8 +29,8 @@
 mat-toolbar {
   display: grid;
   grid-template-areas: "categories filters";
-  grid-template-columns: repear(2, fr);
-  // grid-template-areas: "categories filters release_year genres rating reset ";
+  grid-template-columns: repeat(2, 1fr);
+  // grid-template-areas: "categoribtn_groups filters release_year genres rating reset ";
   // grid-template-columns: auto auto auto auto auto auto 1fr 1fr;
   grid-gap: 1em;
   font-size: $font-size-base;
@@ -41,15 +41,6 @@ mat-toolbar {
 
 #categories {
   grid-area: categories;
-}
-
-#categories {
-  grid-area: categories;
-}
-
-#filters {
-  grid-area: filters;
-  color: $primary-dark-font;
 }
 
 #filters {
@@ -159,15 +150,17 @@ h2 {
 @media (min-width: 1024px) {
   mat-toolbar {
     display: grid;
-    grid-template-areas: "categories filters release_year genres rating reset ";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "categories filters release_year genres rating reset";
+    grid-template-columns: repeat(6, 1fr);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
-    padding: 0 3%;
+  .desktop {
+    display: grid !important;
   }
-  #reset {
-    display: block;
-  }
-}
+} 
+
 .mat-toolbar {
   background-color: $primary;
 }

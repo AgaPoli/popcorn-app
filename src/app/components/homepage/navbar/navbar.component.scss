@@ -13,37 +13,14 @@ mat-toolbar {
   height: fit-content;
   padding: 1% 3%;
   font-size: $font-size-base;
-  .nav_btn{
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  * {
-    color: $primary-dark-font;
-  }
-  mat-toolbar {
-    grid-template-areas: "logo btn_group search account_btn menu_btn ";
-    grid-template-columns: 1fr 1fr 4fr 0.3fr 0.3fr;
-    
-    
-    padding: 0 7%;
-  }
-  #btn_group {
-    
-    grid-area: btn_group;
-  }
-
-  #hamburger {
-    display: none;
-  }
 }
 
 #logo {
   max-height: 100%;
   grid-area: logo;
-  border-radius: 2px;
-  padding: 2%;
+  border-radius: 15px;
+  padding: 2px;
+  justify-self: center;
 }
 
 #new_movie1 {
@@ -72,12 +49,13 @@ mat-toolbar {
 
 #account_btn {
   grid-area: account_btn;
-  justify-self: center;
+  justify-self: end;
   align-self: center;
 }
 
 #menu_btn {
   grid-area: menu_btn;
+  justify-self: end;
 }
 
 #hamburger {
@@ -88,7 +66,7 @@ mat-toolbar {
 #btn_group {
   display: grid;
   grid-template-areas: "new_movie1 new_movie2 new_movie3";
-  grid-template-columns: repeate(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1em;
   justify-items: center;
   align-items: center;
@@ -108,4 +86,30 @@ mat-toolbar {
 
 .mat-toolbar {
   background-color: $primary-dark;
+}
+
+@media (min-width: 1024px) {
+  * {
+    color: $primary-dark-font;
+  }
+
+  mat-toolbar {
+    grid-template-areas: "logo btn_group search account_btn menu_btn ";
+    grid-template-columns: 0.5fr 1.5fr 2fr 0.3fr 0.3fr;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  #btn_group {
+    grid-area: btn_group;
+    display: grid !important;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  #logo {
+    justify-self: baseline;
+  }
 }
