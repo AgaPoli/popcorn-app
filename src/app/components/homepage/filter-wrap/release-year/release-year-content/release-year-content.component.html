@@ -1,4 +1,8 @@
-<h2>Relase year</h2>
+<span class="release-year" >
+<h2 class="title">Relase year</h2>
+<button mat-flat-button class="reset" (click)="yearRelease.value = 1980">
+  Reset
+</button>
 
 <span class="startYear">1980</span>
 
@@ -12,14 +16,13 @@
 
 <span class="endYear">2019</span>
 
-<button mat-flat-button class="reset" (click)="yearRelease.value = 1980">
-  Reset
-</button>
 
-<button mat-stroked-button class="alfa" (click)="yearRelease.value = 2019">
+
+<button mat-stroked-button class="thisYearBtn" (click)="yearRelease.value = 2019">
   This year
 </button>
 
-<button mat-stroked-button class="alfa" (click)="yearRelease.value = 1995">
+<button mat-stroked-button class="lastYearBtn " (click)="yearRelease.value = 1995">
   Last year
 </button>
+</span>

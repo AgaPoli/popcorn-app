@@ -2,10 +2,11 @@
 
 mat-sidenav {
     width: 40vh;
-
+    background-color:$primary-light;
     .sidenav-content{
         display: grid;
         grid-template-rows:  50px repeat(3, 1fr);
         grid-gap: 1em;
+       
     }
   }  

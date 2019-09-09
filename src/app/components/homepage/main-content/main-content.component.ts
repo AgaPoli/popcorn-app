@@ -9,25 +9,19 @@ import { MovieListType } from 'src/app/Types/movie.list.type';
   templateUrl: './main-content.component.html',
   styleUrls: ['./main-content.component.scss']
 })
-export class MainContentComponent implements OnInit, OnDestroy {
- 
-popularMovies: MovieListType[];
-getPopular$: any;
 
-constructor(private apiService: ApiService) { }
+export class MainContentComponent implements OnInit {
+  popularMovies: MovieListType[];
 
-ngOnInit() {
-  this.getPopular$ = this.apiService.getPopular().subscribe((data: PopularMoviesResultType) => {
-    this.popularMovies = data.results;
-  });
-}
+  constructor(private apiService: ApiService) { }
 
-getImagePath(posterPath: string): string{
-  return environment.urlImageApi+posterPath;
-}
+  ngOnInit() {
+    this.apiService.getPopular().subscribe((data: PopularMoviesResultType) => {
+      this.popularMovies = data.results;
+    });
+  }
 
-ngOnDestroy(){
-  this.getPopular$.unsubscribe();
-}
-
+  getImagePath(posterPath: string): string{
+    return environment.urlImageApi+posterPath;
+  }
 }

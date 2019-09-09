@@ -90,14 +90,23 @@ $popcorn-app-theme: mat-light-theme(
     color: mat-color($accent-pallet, darker-contrast);
   }
 
-  .mat-stroked-button.alfa{
+//   .mat-menu-panel{
+//     max-width: unset !important; //wszystkie menu ma max wysokosc wylaczona (bylo na sztywno)
+
+
+  .mat-stroked-button {
     transition: all 0.5s;
-    color: $primary-dark-font;
-    border-radius: 0;
+    color: $primary-dark-font ;
+    border-radius: 0 !important;
     font-size: 1em;
     font-weight: 400;
-    border: 0.7px solid $primary-light;
+    border: 0.7px solid $primary-dark-font !important;
     margin: 4px;
+    
+    
+    width: max-content;
+   
+    white-space: normal !important;
   }
 
 }
@@ -126,13 +135,13 @@ body {
   textarea:focus {
     outline: none;
   }
-  .c-btn {
+  .c-btn {//navbar przyciski
     transition: all 0.5s;
     color: $primary-font;
     background-color: $primary;
     font-size: 1em;
     font-weight: 400;
-    border: 1px solid $primary-font;
+    border: 1px solid $primary-dark-font;
   }
 
   p {

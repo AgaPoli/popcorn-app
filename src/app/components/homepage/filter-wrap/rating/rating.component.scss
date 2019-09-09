@@ -1,8 +1,56 @@
 @import "../../../../../variables";
 
+.rating{
+  display:grid;
+  grid-template-areas:" title title reset_button"
+                      "imdb_img imdb_span imdb_slider"
+                      "tomato_img tomato_span tomato_slider";
+  grid-template-rows: auto;
+  grid-template-columns:  auto;
+  margin: 5px;
+  padding: 1px;
+  color: $primary-font;
+  justify-items: center;
+  align-items: center;
+}
+.title {
+  grid-area: title;
+}
+.reset_button {
+  grid-area: reset_button;
+}
+.imdb_img {
+  grid-area: imdb_img;
+  border-radius: 15px;
+  padding: 2px;
+  justify-self: center;
+  max-height: 100%;
+
+}
+.imdb_span {
+  grid-area: imdb_span;
+}
+.rimdb_slider {
+  grid-area: imdb_slider;
+}
+.tomato_img {
+  grid-area: tomato_img;
+  border-radius: 15px;
+  padding: 2px;
+  justify-self: center;
+  max-height: 100%;
+}
+.tomato_span {
+  grid-area: tomato_span;
+}
+.tomato_slider {
+  grid-area: tomato_slider;
+}
+
+
 #logo {
   max-height: 50px;
-  grid-area: logo;
+
   border-radius: 10px;
   padding: 6px;
 }

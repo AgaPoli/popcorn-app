@@ -1,47 +1,57 @@
 @import "../../../../../variables";
 
-// ::ng-deep .release-year {
-::ng-deep mat-menu-content {
+.release-year {
   display: grid;
   grid-template-areas:
-    "title title title reset"
-    "startYear slider slider endYear"
-    "btn1 btn1 btn2 btn2";
+    "title title reset"
+    "startYear slider endYear"
+    "thisYearBtn lastYearBtn .";
+  color: $primary-font;
+  padding: 2px;  
 
-  // }
+  justify-items: center;
+  align-items: center;
+}
 
-  .reset {
-    grid-area: reset;
-    border: none;
-  }
-  .startYear {
-    grid-area: startYear;
-  }
-  .slider {
-    grid-area: slider;
-  }
-  .endYear {
-    grid-area: endYear;
-  }
+.title {
+  grid-area: title;
+  justify-self: baseline;
+}
+.reset {
+  grid-area: reset;
+}
+.startYear {
+  grid-area: startYear;
+}
+.slider {
+  grid-area: slider;
+}
+.endYear {
+  grid-area: endYear;
+}
 
-  .thisYearBtn {
-    grid-area: btn1;
-  }
+.thisYearBtn {
 
-  .lastYearBtn {
-    grid-area: btn2;
-  }
+  justify-self: baseline;
+  grid-area: thisYearBtn;
+}
+
+.lastYearBtn {
+
+  justify-self: end;
+  grid-area: lastYearBtn;
 }
 
 h2 {
   font-size: $font-size-3;
   color: $primary-font;
   font-weight: 500;
+
   letter-spacing: 0.0125em;
 }
+
 .mat-flat-button {
   color: $primary-dark-font;
   background: none;
   text-transform: uppercase;
 }
-

@@ -1,7 +1,17 @@
 @import "../../../../../variables";
 
-span{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, .5fr));
-    grid-gap: .5em;
+.genres_grid {
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(100px, .5fr));
+
+  // grid-gap: .5em;
+  color: $primary-font;
+  overflow: visible !important;
+  & > button{
+      margin:2px !important;  
+    }
+}
+
+app-genres{
+    text-align: center;
 }

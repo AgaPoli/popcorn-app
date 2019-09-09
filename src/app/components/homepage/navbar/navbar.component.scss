@@ -11,7 +11,9 @@ mat-toolbar {
   align-items: center;
   color: $primary-dark-font;
   height: fit-content;
-  padding: 1% 3%;
+  margin-bottom: 0;
+  padding-bottom: 6px !important;
+  padding-top: 6px !important;
   font-size: $font-size-base;
 }
 
@@ -96,8 +98,8 @@ mat-toolbar {
   mat-toolbar {
     grid-template-areas: "logo btn_group search account_btn menu_btn ";
     grid-template-columns: 0.5fr 1.5fr 2fr 0.3fr 0.3fr;
-    padding-bottom: 0;
-    padding-top: 0;
+   
+  
   }
 
   #btn_group {
