@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { PopularMoviesResultType } from './Types/popular.movies.result';
-import { MovieListType } from './Types/movie.list.type';
+import { Movie } from './models/movie.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,7 @@ export class ApiService {
     return environment.urlImageApi+posterPath;
   }
 
-  getPopular(): Observable<PopularMoviesResultType>{
+  getPopular(): Observable<any>{
     // https://api.themoviedb.org/3/movie/popular?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
     return this.httpClient.get(
@@ -28,13 +27,13 @@ export class ApiService {
         }
       }
     ).pipe(
-      map((data: PopularMoviesResultType) => {
+      map((data: any) => {
         return data;
       })
     );
   }
 
-  getMovie(movie_id: number): Promise<any>{
+  getMovie(movie_id: number): Promise<Movie|null>{
     // https://api.themoviedb.org/3/movie/429617?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
     return this.httpClient.get(
@@ -46,7 +45,10 @@ export class ApiService {
       }
     ).toPromise()
     .then(data => data)
-    .catch(error => {console.log(error)})
+    .catch(error => {
+      console.log(error);
+      return null;
+  })
 
   }
 

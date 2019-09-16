@@ -5,7 +5,8 @@ $primary-dark: #141414;
 $primary-light: #2e2e2e;
 $accent: #fcb500;
 $primary-font: #cdcecd;
-$primary-dark-font: #afafaf;
+$primary-dark-font: #bebebe;
+$primary-darkest-font:#4c5a67;
 
 // Tekst---------------------------------------------------------------------------
 $font-size-base: 1rem;
@@ -17,9 +18,9 @@ $font-size-5: $font-size-base * 0.875; // ~14px
 $font-size-6: $font-size-base * 0.75; // ~12px
 $font-size-7: $font-size-base * 0.625; // ~10px
 
-$line-height-base: 1.5;
-$line-height-sm: 1.2;
-$line-height-lg: 1.8;
+$line-height-base: 1.5em;
+$line-height-sm: 1.2em;
+$line-height-lg: 1.8em;
 
 // Siatka
 $grid-base: 10px;
@@ -79,7 +80,7 @@ body {
 //typography------------------------------------------------------------------
 
 p {
-    font-size: $font-size-5;
+    font-size: $font-size-4;
     font-weight: 400;
     line-height: $line-height-base;
     margin: 0;
@@ -131,5 +132,11 @@ img {
 
 
 
-
-
+.text_highlighting{
+ font-size: $font-size-4;
+ color: $primary-darkest-font;
+ font-weight: bold;
+ line-height:$line-height-lg;
+ margin-bottom: 10px;
+ text-transform: uppercase;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Rating } from 'src/app/models/movie.model';
 
 @Component({
   selector: 'app-details-photo',
@@ -8,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DetailsPhotoComponent implements OnInit {
 
   @Input() src: string;
+  @Input() rating: Rating;
 
   constructor() { }
 

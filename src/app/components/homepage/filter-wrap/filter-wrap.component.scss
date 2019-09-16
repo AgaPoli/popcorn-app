@@ -47,7 +47,7 @@ mat-toolbar {
 
 #filters {
   grid-area: filters;
-  color: $primary-dark-font;
+  color: $primary-darkest-font;
 }
 
 #release_year {
@@ -62,7 +62,7 @@ mat-toolbar {
 }
 #reset {
   grid-area: reset;
-  color: $primary-dark-font;
+  color: $primary-darkest-font;
 }
 
 .mat-flat-button {
@@ -88,7 +88,7 @@ h2 {
   letter-spacing: 0.0125em;
 }
 .mat-flat-button {
-  color: $primary-dark-font;
+  color: $primary-darkest-font;
   background: none;
   text-transform: uppercase;
 }

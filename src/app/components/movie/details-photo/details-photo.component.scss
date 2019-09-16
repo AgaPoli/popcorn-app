@@ -1,16 +1,40 @@
-@import "../../../../popcorn-theme";
-
-.card {
-  width: 33%;
-  height: 100%;
+@import "../../../../variables";
+// .card {
+//   width: 33%;
+//   height: 100%;
   //position: absolute;
-  top: 0;
+//   top: 0;
+// }
+// .c-btn {
+//   transition: all 0.5s;
+//   color: $primary-font;
+//   background-color: $primary;
+//   font-size: $font-size-base;
+//   font-weight: 400;
+//   border: 1px solid $primary-font;
+// }
+
+.mat-card-content{
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  width: 30vh;
+  //background-color: #212121;
 }
-.c-btn {
-  transition: all 0.5s;
+mat-card{
+  text-align: center;
+  
+}
+.mat_card{
+  background-color: $primary-light;
+  padding-top: 10px;
+  border-radius: 0;
+  border-color: $primary-light;
   color: $primary-font;
-  background-color: $primary;
-  font-size: $font-size-base;
-  font-weight: 400;
-  border: 1px solid $primary-font;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+.mat-card-image:first-child{
+  margin-top: 0;
+  border-radius: 0;
 }
