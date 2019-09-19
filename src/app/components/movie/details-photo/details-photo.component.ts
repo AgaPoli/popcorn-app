@@ -17,4 +17,24 @@ export class DetailsPhotoComponent implements OnInit {
     console.log(this.src);
   }
 
+  getImbdLink(imdbId: string): string|boolean{
+    const imbdLink = `https://www.imdb.com/title/${imdbId}`;
+    // const OLD_imbdLink = 'https://www.imdb.com/title/'+imdbId;
+    
+    // "5": string !== 5: number   //  true
+    // "5": string != 5: number   //  false
+    // "5": string == 5: number   //  true
+    // "5": string === 5: number  // false
+    // "5": string === `5`: string  // true
+    // "5": string === '5': string  // true
+
+    if (imdbId !== ""){
+      return imbdLink;
+    }else{
+      return false;
+    }
+    
+    return imdbId !== "" ? imbdLink : false;
+  }
+
 }

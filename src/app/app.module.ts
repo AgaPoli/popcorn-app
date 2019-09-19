@@ -61,6 +61,7 @@ import { ButtonComponent } from './components/shared/button/button.component';
 import { ReleaseYearContentComponent } from './components/homepage/filter-wrap/release-year/release-year-content/release-year-content.component';
 import { RatingContentComponent } from './components/homepage/filter-wrap/rating/rating-content/rating-content.component';
 import { GenresContentComponent } from './components/homepage/filter-wrap/genres/genres-content/genres-content.component';
+import { FilterService } from './filter.service';
 
 
 @NgModule({
@@ -164,7 +165,7 @@ import { GenresContentComponent } from './components/homepage/filter-wrap/genres
     MatTreeModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [FilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

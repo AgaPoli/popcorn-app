@@ -21,7 +21,7 @@ app-details-photo {
 app-details-infos {
   padding-right: 15px;
   padding-left: 40px;
-}
+  }
 
 @media (min-width: 1024px) {
   .movie {
@@ -60,16 +60,22 @@ p {
 ul {
   list-style-type: none;
   line-height: 2em;
+  border-top: 1px solid #4c5a67;
 
   li {
     line-height: 1.5em;
     margin: 0;
     margin-bottom: 10px;
   }
+  .watch_on{
+    border-top:0;
+  }
 }
+
 .movie_info {
   padding-left: 10px;
 }
+
 .budget {
   width: 50px;
   height: 50px;

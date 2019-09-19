@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { MatSidenav } from '@angular/material';
+import { FilterService } from 'src/app/filter.service';
 
 @Component({
   selector: 'app-filter-wrap',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterWrapComponent implements OnInit {
 
-  constructor() { }
+  constructor(private filterService: FilterService ) {}
 
   ngOnInit() {
+    console.log(this.filterService)
+  }
+
+  test(){
+    // this.filterService.sidenav.toogle();
   }
 
 }
