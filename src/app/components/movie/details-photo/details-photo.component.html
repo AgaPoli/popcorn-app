@@ -7,18 +7,19 @@
   <img mat-card-image [src]="src">
   <mat-card-content>
 
-    <span *ngIf="getImbdLink(rating.imdb_id)">
-      <span class="text_highlighting">IMBD</span>
+    
+      <span class="text_highlighting imbd_name">IMBD</span>
+      <span class="imbd_img" *ngIf="getImbdLink(rating.imdb_id)">
       <a [href]="getImbdLink(rating.imdb_id)" target="_blank">
-        <img src="../../../assets/images/imdb.png" >
-      </a>
-    </span>
+        <img class="budget imbd_img" src="../../../assets/images/imdb.png" >
+      </a></span>
+    
 
-    <span class="text_highlighting">Rating</span>
-    <span>{{ rating.vote_average }}</span>
+    <span class="text_highlighting rating_name ">Rating</span>
+    <span class="rating_average">{{ rating.vote_average }}</span>
 
-    <span class="text_highlighting">RuntimRRTTTe</span>
-    <span>{{rating.runtime}}</span>
+    <span class="text_highlighting runtime_name ">Runtim</span>
+    <span class="runtime_time">{{rating.runtime}}</span>
 
   </mat-card-content>
   <!-- <mat-card-actions>

@@ -17,9 +17,36 @@
 .mat-card-content{
   display: grid;
   grid-template-columns: repeat(2, 0.5fr);
+  grid-template-rows: auto;
+  grid-template-areas: "imbd_name imbd_img "
+             "rating_name rating_average"
+             "runtime_name runtime_time ";
+
   width: 30vh;
+  justify-items: center;
+    align-items: center;
+  
   //background-color: #212121;
 }
+
+.imbd_name  {
+  grid-area: imbd_name;
+}
+.imbd_img  {
+  grid-area: imbd_img ;
+}.rating_name {
+  grid-area: rating_name;
+}.rating_average  {
+  grid-area: rating_average ;
+}.runtime_name  {
+  grid-area: runtime_name;
+}.runtime_time  {
+  grid-area: runtime_time ;
+}
+
+
+
+
 mat-card{
   text-align: center;
   
@@ -38,4 +65,8 @@ mat-card{
 .mat-card-image:first-child{
   margin-top: 0;
   border-radius: 0;
+}
+
+.img_imdb{
+  max-width: 50px;
 }

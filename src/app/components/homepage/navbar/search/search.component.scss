@@ -1,4 +1,4 @@
-@import "../../../../../popcorn-theme";
+@import "../../../../../variables";
 
 input {
   width: 100%;
@@ -9,7 +9,7 @@ input {
   height: 50%;
 
   transition: border-color 0.2s linear;
-  border: solid 2px transparent;
+
   padding: 4px 55px 4px 55px;
 
   border-radius: 2px;
@@ -17,4 +17,12 @@ input {
   &:focus {
     border: 1px solid #fcb500;
   }
+}
+
+.mat-form-field-infix{
+  padding: 0 !important;
+  border-top:  0 !important;
+}
+mat-form-field{
+  width: 100%;
 }

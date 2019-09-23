@@ -1,6 +1,7 @@
 
 
 export interface Movie {
+  push(newMovie: string);
     adult:                 boolean;
     backdrop_path:         string;
     belongs_to_collection: null;
@@ -26,6 +27,7 @@ export interface Movie {
     video:                 boolean;
     vote_average:          number;
     vote_count:            number;
+        
 }
 
 export interface Genre {
@@ -56,4 +58,8 @@ export interface Rating {
     runtime:               string;
     vote_average:          number;
     vote_count:            number;
+}
+
+export interface PersonName {
+  name: string;
 }

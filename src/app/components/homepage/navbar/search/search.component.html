@@ -1,4 +1,20 @@
-<input type="text" placeholder="  Search for movies ">
+<!-- <input #searchMovieInput 
+(keyup.enter)="searchMovie(searchMovieInput.value)"
+type="text" placeholder="  Search for movies "> -->
 
+<mat-form-field class="mat-form-field-infix" >
+    <input 
+    #searchMovieInput
+    matInput
+    placeholder="Search for movies"
+    [matAutocomplete]="auto"
+    (keyup.enter)="searchMovie(searchMovieInput.value)">
 
-
+    <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let movie of movies" [value]="movie.name" (click)="redirectToMovie(movie.id)">
+        <img [src]="getImagePath(movie.backdrop_path)" height="40">
+        <span>{{movie.title}}</span>
+        <small>({{movie.release_date}})</small>
+    </mat-option>
+    </mat-autocomplete>
+</mat-form-field>

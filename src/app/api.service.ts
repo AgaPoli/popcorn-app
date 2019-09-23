@@ -51,5 +51,44 @@ export class ApiService {
   })
 
   }
+  
+  searchMovie(original_title: string): Promise<any>{
+    // https://api.themoviedb.org/3/movie/429617?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
-}
+    return this.httpClient.get(
+      `${environment.urlApi}/3/search/movie`,
+      {
+        params:{ 
+          api_key: environment.apiKey,
+          query: original_title
+        }
+      }
+    ).toPromise()
+    .then(data => data)
+    .catch(error => {
+      console.log(error);
+      return null;
+  })
+
+  }
+  searchPerson(name: string): Promise<any>{
+    // https://api.themoviedb.org/3/movie/429617?api_key=c55603a6d0320ce9d6f18ef4abb3932b
+
+    return this.httpClient.get(
+      `${environment.urlApi}/3/search/person`,
+      {
+        params:{ 
+          api_key: environment.apiKey,
+          query: name
+        }
+      }
+    ).toPromise()
+    .then(data => data)
+    .catch(error => {
+      console.log(error);
+      return null;
+  })
+
+  }}
+
+
