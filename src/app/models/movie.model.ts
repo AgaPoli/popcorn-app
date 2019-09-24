@@ -63,3 +63,8 @@ export interface Rating {
 export interface PersonName {
   name: string;
 }
+
+export interface SearchUpcoming {
+    name: string;
+  }
+  
