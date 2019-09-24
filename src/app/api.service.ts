@@ -10,85 +10,127 @@ import { Movie } from './models/movie.model';
 })
 export class ApiService {
 
-  constructor(private httpClient: HttpClient) {}
+  public activeCategory: string = 'popular';
 
-  getImagePath(posterPath: string): string{
-    return environment.urlImageApi+posterPath;
+
+  constructor(private httpClient: HttpClient) { }
+
+  getImagePath(posterPath: string): string {
+    return environment.urlImageApi + posterPath;
   }
 
-  getPopular(): Observable<any>{
+  getPopular(): Promise<any> {
     // https://api.themoviedb.org/3/movie/popular?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
     return this.httpClient.get(
       `${environment.urlApi}/3/movie/popular`,
       {
-        params:{ 
+        params: {
           api_key: environment.apiKey
         }
       }
-    ).pipe(
-      map((data: any) => {
-        return data;
+    ).toPromise()
+      .then(data => data)
+      .catch(error => {
+        console.log(error);
+        return null;
       })
-    );
   }
 
-  getMovie(movie_id: number): Promise<Movie|null>{
+  getMovie(movie_id: number): Promise<Movie | null> {
     // https://api.themoviedb.org/3/movie/429617?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
     return this.httpClient.get(
       `${environment.urlApi}/3/movie/${movie_id}`,
       {
-        params:{ 
+        params: {
           api_key: environment.apiKey
         }
       }
     ).toPromise()
-    .then(data => data)
-    .catch(error => {
-      console.log(error);
-      return null;
-  })
+      .then(data => data)
+      .catch(error => {
+        console.log(error);
+        return null;
+      })
 
   }
-  
-  searchMovie(original_title: string): Promise<any>{
-    // https://api.themoviedb.org/3/movie/429617?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
+  searchMovie(original_title: string): Promise<any> {
+   
     return this.httpClient.get(
       `${environment.urlApi}/3/search/movie`,
       {
-        params:{ 
+        params: {
           api_key: environment.apiKey,
           query: original_title
         }
       }
     ).toPromise()
-    .then(data => data)
-    .catch(error => {
-      console.log(error);
-      return null;
-  })
+      .then(data => data)
+      .catch(error => {
+        console.log(error);
+        return null;
+      })
 
   }
-  searchPerson(name: string): Promise<any>{
-    // https://api.themoviedb.org/3/movie/429617?api_key=c55603a6d0320ce9d6f18ef4abb3932b
-
+  searchPerson(name: string): Promise<any> {
+  
     return this.httpClient.get(
       `${environment.urlApi}/3/search/person`,
       {
-        params:{ 
+        params: {
           api_key: environment.apiKey,
           query: name
         }
       }
     ).toPromise()
-    .then(data => data)
-    .catch(error => {
-      console.log(error);
-      return null;
-  })
+      .then(data => data)
+      .catch(error => {
+        console.log(error);
+        return null;
+      })
 
-  }}
+  }
+
+  searchUpcoming(): Promise<any> {
+  
+    return this.httpClient.get(
+      `${environment.urlApi}/3/movie/upcoming`,
+      {
+        params: {
+          api_key: environment.apiKey,
+        }
+      }
+    ).toPromise()
+      .then(data => data)
+      .catch(error => {
+        console.log(error);
+        return null;
+      })
+
+  }
+
+  topRated(): Promise<any> {
+    return this.httpClient.get(
+      `${environment.urlApi}/3/movie/top_rated`,
+      {
+        params: {
+          api_key: environment.apiKey,
+        }
+      }
+    ).toPromise()
+      .then(data => data)
+      .catch(error => {
+        console.log(error);
+        return null;
+      })
+
+  }
+
+}
+
+
+
 
 
