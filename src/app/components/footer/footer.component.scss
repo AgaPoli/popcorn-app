@@ -1,9 +1,10 @@
-@import "../../../popcorn-theme";
+@import "../../../variables";
 footer {
   width: 100%;
-  position: absolute;
+
   bottom: 0;
-  background-color: $primary-dark;
+
+  max-height: 50px;
 }
 
 h5 {
@@ -14,4 +15,8 @@ h5 {
 a {
   font-size: $font-size-5;
   color: $primary-font;
+}
+
+hr {
+  background-color: #fff;
 }
