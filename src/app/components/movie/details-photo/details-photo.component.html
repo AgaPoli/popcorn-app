@@ -1,29 +1,19 @@
 <mat-card class="mat_card">
-  <!-- <mat-card-header> -->
-  <!-- <div mat-card-avatar></div> -->
-  <!-- <mat-card-title>Shiba Inu</mat-card-title> -->
-  <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-  <!-- </mat-card-header> -->
-  <img mat-card-image [src]="src">
+  <img mat-card-image [src]="src" />
   <mat-card-content>
-
-    
-      <span class="text_highlighting imbd_name">IMBD</span>
-      <span class="imbd_img" *ngIf="getImbdLink(rating.imdb_id)">
-      <a [href]="getImbdLink(rating.imdb_id)" target="_blank">
-        <img class="budget imbd_img" src="../../../assets/images/imdb.png" >
-      </a></span>
-    
+    <span class="text_highlighting imbd_name">IMBD</span>
+    <span class="imbd_img">
+      <a [href]="imdBase + rating.imdb_id" target="_blank">
+        <img
+          class="budget imbd_img"
+          src="../../../assets/images/imdb.png"
+        /> </a
+    ></span>
 
     <span class="text_highlighting rating_name ">Rating</span>
     <span class="rating_average">{{ rating.vote_average }}</span>
 
     <span class="text_highlighting runtime_name ">Runtim</span>
-    <span class="runtime_time">{{rating.runtime}}</span>
-
+    <span class="runtime_time">{{ rating.runtime }}</span>
   </mat-card-content>
-  <!-- <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions> -->
 </mat-card>
