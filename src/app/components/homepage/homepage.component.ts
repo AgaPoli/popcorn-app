@@ -9,17 +9,17 @@ import { MatSidenav } from '@angular/material';
 })
 export class HomepageComponent implements OnInit {
 
-@ViewChild('snav',{static: false}) sideNav: MatSidenav;
+  @ViewChild('snav', { static: false }) sideNav: MatSidenav;
 
-  constructor(private filterService: FilterService ) { }
+  constructor(private filterService: FilterService) { }
 
   ngOnInit() {
     console.log(this.filterService);
-    // this.filterService.setSidenav(this.sideNav);
+    this.filterService.sidenav = this.sideNav;
   }
 
-  test(){
-    this.sideNav.toggle()
+  test() {
+    this.filterService.sidenav.toggle()
   }
 
 }
