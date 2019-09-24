@@ -108,7 +108,17 @@ $popcorn-app-theme: mat-light-theme(
    
     white-space: normal !important;
   }
-
+  
+  .mat-form-field-infix{
+    padding: 0 !important;
+    border-top:  0 !important;
+  }
+  .mat-form-field-wrapper{
+    padding-bottom: 0 !important;
+  }
+  .mat-form-field-subscript-wrapper{
+    margin-top: 0 !important;
+  }
 }
 
 @include mix-app-theme($popcorn-app-theme);
