@@ -32,13 +32,12 @@ export class ApiService {
     ).toPromise()
       .then(data => data)
       .catch(error => {
-        console.log(error);
+
         return null;
       })
   }
 
   getMovie(movie_id: number): Promise<Movie | null> {
-    // https://api.themoviedb.org/3/movie/429617?api_key=c55603a6d0320ce9d6f18ef4abb3932b
 
     return this.httpClient.get(
       `${environment.urlApi}/3/movie/${movie_id}`,
@@ -50,14 +49,14 @@ export class ApiService {
     ).toPromise()
       .then(data => data)
       .catch(error => {
-        console.log(error);
+
         return null;
       })
 
   }
 
   searchMovie(original_title: string): Promise<any> {
-   
+
     return this.httpClient.get(
       `${environment.urlApi}/3/search/movie`,
       {
@@ -69,13 +68,13 @@ export class ApiService {
     ).toPromise()
       .then(data => data)
       .catch(error => {
-        console.log(error);
+
         return null;
       })
 
   }
   searchPerson(name: string): Promise<any> {
-  
+
     return this.httpClient.get(
       `${environment.urlApi}/3/search/person`,
       {
@@ -87,14 +86,14 @@ export class ApiService {
     ).toPromise()
       .then(data => data)
       .catch(error => {
-        console.log(error);
+
         return null;
       })
 
   }
 
   searchUpcoming(): Promise<any> {
-  
+
     return this.httpClient.get(
       `${environment.urlApi}/3/movie/upcoming`,
       {
@@ -105,7 +104,7 @@ export class ApiService {
     ).toPromise()
       .then(data => data)
       .catch(error => {
-        console.log(error);
+
         return null;
       })
 
@@ -122,7 +121,7 @@ export class ApiService {
     ).toPromise()
       .then(data => data)
       .catch(error => {
-        console.log(error);
+
         return null;
       })
 
