@@ -2,33 +2,17 @@
 
 #image_container {
   width: 100%;
-  
   background-color: $primary-light;
-  // background-image: url("https://images.justwatch.com/poster/86829625/s166");
-  // background-attachment: fixed;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   margin-bottom: 20px;
-  // justify-items: center;
   grid-gap: 1em;
-
   padding: 10px;
-
-  // &:active {
-  //   background: rgba(251, 226, 60, 0.5);
-  //   color: #fff;
-  //   height: 100%;
-  //   left: 0;
-  //   opacity: 0;
-  //   top: 0;
-  //   transition: 0.5s ease;
-  //   width: 100%;
-  // }
+  width: 100%;
 
   .title-poster {
     height: 250px;
     display: grid;
-    // grid-template-areas: "image" "title";
     grid-template-areas: "image";
 
     img {
@@ -36,8 +20,5 @@
       object-fit: cover;
       height: 100%;
     }
-    // .title{
-    //   grid-area: title;
-    // }
   }
 }

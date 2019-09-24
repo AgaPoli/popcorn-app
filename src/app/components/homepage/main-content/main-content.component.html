@@ -1,17 +1,5 @@
 <div id="image_container">
-  <div
-  *ngFor="let movie of popularMovies"
-  class="title-poster"
-  [routerLink]="['/movie', movie.id]"
-  >
-    <!-- <span class="title">{{movie.title}}</span>  -->
-    <img [src]="getImagePath(movie.poster_path)"> <!-- https://developers.themoviedb.org/3/movies/get-popular-movies -->
-
-    <!-- {{movie.original_title}}
-
-    <div *ngFor="let genreId of movie.genre_ids">
-      {{genreId}}
-    </div> -->
+  <div *ngFor="let movie of movies" class="title-poster" [routerLink]="['/movie', movie.id]">
+    <img [src]="getImagePath(movie.poster_path)">
   </div>
 </div>
-
