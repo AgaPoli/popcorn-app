@@ -3,58 +3,35 @@ import { ApiService } from "src/app/api.service";
 import { ActivatedRoute } from "@angular/router";
 import { Movie, Rating } from "src/app/models/movie.model";
 
-
 @Component({
   selector: "app-movie",
   templateUrl: "./movie.component.html",
   styleUrls: ["./movie.component.scss"]
 })
 export class MovieComponent implements OnInit {
-  // # definicja zmiennej
-  // zmienną możesz zdeklarować także w constructor używająć zapisu]
-  // constructor(private zmienna: typ){}
-
-  // nazwa: typ
-  alfa: number;
-  // nazwa = wartość
-  beta = false;
-
   movie: Movie;
   id: number;
   routing: any;
   rating: Rating;
 
-
   constructor(
     private activatedRoute: ActivatedRoute,
     private apiService: ApiService
-  ) {}
+  ) { }
 
   ngOnInit() {
-    this.routing = this.activatedRoute.params.subscribe(
-      // function (data){
-      //   console.log(data);
-      // }
-
-      // (data) => {
-      //   console.log(data);
-      // }
-      params => {
-        this.id = +params["id"];
-        this.getMovie(this.id);
-      }
-    );
+    this.routing = this.activatedRoute.params.subscribe(params => {
+      this.id = +params["id"];
+      this.getMovie(this.id);
+    });
   }
 
   getMovie(id: number) {
-    this.apiService
-      .getMovie(id)
-      .then(data => {
-        console.log(data);
-        this.movie = data;
-        this.getRating(this.movie);
-      });
-      // .finally(() => this.routing.unsubscribe());
+    this.apiService.getMovie(id).then(data => {
+      console.log(data);
+      this.movie = data;
+      this.getRating(this.movie);
+    });
   }
 
   getRating(movie: Movie): Rating {
