@@ -14,7 +14,6 @@ export class HomepageComponent implements OnInit {
   constructor(private filterService: FilterService) { }
 
   ngOnInit() {
-    console.log(this.filterService);
     this.filterService.sidenav = this.sideNav;
   }
 
