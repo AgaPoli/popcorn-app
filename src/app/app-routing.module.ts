@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'movie/:id', component: MovieComponent },
   { path: 'movie/:id/poster', component: PosterComponent },
-  // { path: 'search', component: NavbarComponent }
 ];
 
 @NgModule({

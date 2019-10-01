@@ -75,17 +75,6 @@ mat-toolbar {
   width: 100%;
 }
 
-// .nav_btn {
-//   color: $primary-font;
-//   border-radius: 0;
-//   &:hover {
-//     border-bottom: 4px solid $accent;
-//   }
-// }
-// .mat-toolbar {
-//   background-color: $primary;
-// }
-
 .mat-toolbar {
   background-color: $primary-dark;
 }
@@ -98,8 +87,6 @@ mat-toolbar {
   mat-toolbar {
     grid-template-areas: "logo btn_group search account_btn menu_btn ";
     grid-template-columns: 0.5fr 1.5fr 2fr 0.3fr 0.3fr;
-   
-  
   }
 
   #btn_group {

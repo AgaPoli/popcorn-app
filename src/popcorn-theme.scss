@@ -16,7 +16,6 @@ $font-size-5: $font-size-base * 0.875; // ~14px
 $font-size-6: $font-size-base * 0.75; // ~12px
 $font-size-7: $font-size-base * 0.625; // ~10px
 
-
 $line-height-base: 1.5;
 $line-height-sm: 1.2;
 $line-height-lg: 1.8;
@@ -31,8 +30,6 @@ $border-radius: $grid-base * 0.5;
 // Breakpoint
 $bp-medium: "800px";
 $bp-large: "1200px";
-
-
 
 // Themes
 @import "~@angular/material/theming";
@@ -84,39 +81,37 @@ $popcorn-app-theme: mat-light-theme(
     background-color: mat-color($primary-pallet);
     color: mat-color($primary-pallet, lighter-contrast);
   }
-  
+
   .mat-button-toggle-checked {
     background-color: mat-color($accent-pallet);
     color: mat-color($accent-pallet, darker-contrast);
   }
 
-//   .mat-menu-panel{
-//     max-width: unset !important; //wszystkie menu ma max wysokosc wylaczona (bylo na sztywno)
-
+  //   .mat-menu-panel{
+  //     max-width: unset !important; //wszystkie menu ma max wysokosc wylaczona (bylo na sztywno)
 
   .mat-stroked-button {
     transition: all 0.5s;
-    color: $primary-dark-font ;
+    color: $primary-dark-font;
     border-radius: 0 !important;
     font-size: 1em;
     font-weight: 400;
     border: 0.7px solid $primary-dark-font !important;
     margin: 4px;
-    
-    
+
     width: max-content;
-   
+
     white-space: normal !important;
   }
-  
-  .mat-form-field-infix{
+
+  .mat-form-field-infix {
     padding: 0 !important;
-    border-top:  0 !important;
+    border-top: 0 !important;
   }
-  .mat-form-field-wrapper{
+  .mat-form-field-wrapper {
     padding-bottom: 0 !important;
   }
-  .mat-form-field-subscript-wrapper{
+  .mat-form-field-subscript-wrapper {
     margin-top: 0 !important;
   }
 }
@@ -125,7 +120,6 @@ $popcorn-app-theme: mat-light-theme(
 
 html,
 body {
-  
   @media only screen and (min-width: 1000px) {
     --global-padding: 8em;
   }
@@ -145,7 +139,8 @@ body {
   textarea:focus {
     outline: none;
   }
-  .c-btn {//navbar przyciski
+  .c-btn {
+    //navbar przyciski
     transition: all 0.5s;
     color: $primary-font;
     background-color: $primary;
@@ -160,26 +155,30 @@ body {
     line-height: $line-height-base;
     margin: 0;
     margin-bottom: $grid-base; //10px
-}
+  }
 
-h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: $font-size-4;
     line-height: $line-height-base;
     margin: 0;
-}
- 
-a {
+  }
+
+  a {
     color: $primary-font;
     text-decoration: none;
     &:hover {
-        color: $primary-font;
-        text-decoration: underline; //ma byc podkreslnik zolty
+      color: $primary-font;
+      text-decoration: underline; //ma byc podkreslnik zolty
     }
-} 
-img {
-  max-width: 100%;
-}
-
+  }
+  img {
+    max-width: 100%;
+  }
 }
 
 //-----------mixins------------------------------------
@@ -187,7 +186,7 @@ img {
 @mixin medium-up {
   @media (min-width: #{$bp-medium}) {
     //800px#{}bo zapisane jako string
-    @content //(tu wstawiam dowolne deklaracje);
+    @content //(tu wstawiam dowolne deklaracje);;
   }
 }
 
