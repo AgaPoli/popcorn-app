@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./search.component.scss']
 })
 
-
 export class SearchComponent implements OnInit {
 
   movies: Movie[];
@@ -20,7 +19,9 @@ export class SearchComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.searchPerson('Pit');
+  }
 
   searchMovie(movieTitle: string): void {
     console.log(movieTitle);
@@ -28,20 +29,22 @@ export class SearchComponent implements OnInit {
     .then(
       movies => {
         console.log(movies);
-        this.movies = movies.results;  //results jest ze strony api
+        this.movies = movies.results; 
       }
     )
   }
+
   searchPerson(personName: string): void {
     console.log(personName);
     this.apiService.searchPerson(personName)
     .then(
-      movies => {
-        console.log(movies);
-        // this. name =  name.results;  //results jest ze strony api
+      persons => {
+        console.log(persons);
+        this.name =  persons.results[0].name;
       }
     )
   }
+
   getImagePath(posterPath: string): string{
     return this.apiService.getImagePath(posterPath);
   }

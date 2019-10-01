@@ -7,3 +7,5 @@ export class PopularMoviesResultType {
     public total_pages: number;
     public results: MovieListType[];
 }
+
+
