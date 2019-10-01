@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-button-group',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonGroupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  setCategory(category: string): void{
+    this.apiService.activeCategory.next(category);
   }
 
 }
