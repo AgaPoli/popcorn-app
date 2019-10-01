@@ -4,14 +4,12 @@ input {
   width: 100%;
   background-image: url(https://image.flaticon.com/icons/png/512/55/55369.png);
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: right;
   background-size: 20px;
   height: 50%;
-
   transition: border-color 0.2s linear;
-
+  border: 1px solid #fcb500;
   padding: 4px 55px 4px 55px;
-
   border-radius: 2px;
 
   &:focus {
@@ -19,10 +17,6 @@ input {
   }
 }
 
-.mat-form-field-infix{
-  padding: 0 !important;
-  border-top:  0 !important;
-}
-mat-form-field{
+mat-form-field {
   width: 100%;
 }
