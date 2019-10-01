@@ -1,9 +1,7 @@
 @import "../../../variables";
 footer {
   width: 100%;
-
   bottom: 0;
-
   max-height: 50px;
 }
 
@@ -18,5 +16,5 @@ a {
 }
 
 hr {
-  background-color: #fff;
+  background-color:$primary-darkest-font;
 }
