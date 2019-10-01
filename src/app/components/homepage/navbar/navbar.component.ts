@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { environment } from "../../../../environments/environment";
+import { ApiService } from 'src/app/api.service';
 
 
 @Component({
@@ -10,9 +11,12 @@ import { environment } from "../../../../environments/environment";
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  setCategory(category: string): void{
+    this.apiService.activeCategory.next(category);
   }
 
 }
