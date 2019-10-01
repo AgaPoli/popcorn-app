@@ -73,6 +73,7 @@ body {
     font-size: $font-size-4; //16px
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -154,3 +155,7 @@ img {
 .mat-form-field-underline{
   display: none !important;
   }
+
+  .mat-drawer-container {
+    background-color: $primary-light;
+    color: rgba(0, 0, 0, 0.87);}
