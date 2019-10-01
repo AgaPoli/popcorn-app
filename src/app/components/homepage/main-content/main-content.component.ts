@@ -13,53 +13,49 @@ import { MovieListType } from 'src/app/models/movie.list.type';
 export class MainContentComponent implements OnInit {
   movies: MovieListType[];
   activeCategory: string;
-  
+
   constructor(private apiService: ApiService) { }
-  
+
   ngOnInit() {
     this.apiService.getMessage()
-    .subscribe(
-      category => {
-        this.getMoviesByCategory(category).then(
-                (movies) => {this.movies = movies}
-              ) 
-      }    
-    )
+      .subscribe(
+        category => {
+          this.getMoviesByCategory(category).then(
+            (movies) => { this.movies = movies }
+          )
+        }
+      )
   }
 
-  getMoviesByCategory(category: string = ''): Promise<MovieListType[]>{
-    
-    switch(category){
+  getMoviesByCategory(category: string = ''): Promise<MovieListType[]> {
+
+    switch (category) {
 
       case 'topRated':
         return this.apiService.topRated()
-        .then(
-          (data: PopularMoviesResultType) => {
-          return data.results;
-        });
+          .then(
+            (data: PopularMoviesResultType) => {
+              return data.results;
+            });
 
       case 'upcoming':
-          return this.apiService.searchUpcoming()
-        .then(
-          (data: PopularMoviesResultType) => {
-            return data.results;
-        });
+        return this.apiService.searchUpcoming()
+          .then(
+            (data: PopularMoviesResultType) => {
+              return data.results;
+            });
 
-        
- 
       case 'popular':
       default:
         return this.apiService.getPopular()
-        .then(
-          (data: PopularMoviesResultType) => {
-            return data.results;
-        });
+          .then(
+            (data: PopularMoviesResultType) => {
+              return data.results;
+            });
     }
   }
 
-
-  
-  getImagePath(posterPath: string): string{
-    return environment.urlImageApi+posterPath;
+  getImagePath(posterPath: string): string {
+    return environment.urlImageApi + posterPath;
   }
 }
