@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Movie } from './models/movie.model';
 
@@ -10,10 +10,13 @@ import { Movie } from './models/movie.model';
 })
 export class ApiService {
 
-  public activeCategory: string = 'popular';
-
+  public activeCategory = new BehaviorSubject<string>('popular');
 
   constructor(private httpClient: HttpClient) { }
+
+  getMessage(): Observable<string> {
+    return this.activeCategory.asObservable();
+}
 
   getImagePath(posterPath: string): string {
     return environment.urlImageApi + posterPath;
