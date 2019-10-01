@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FilterService } from 'src/app/filter.service';
 import { MatSidenav } from '@angular/material';
 
@@ -13,12 +13,10 @@ export class HomepageComponent implements OnInit {
 
   constructor(private filterService: FilterService) { }
 
-  ngOnInit() {
-    this.filterService.sidenav = this.sideNav;
-  }
+  ngOnInit() {}
 
-  test() {
-    this.filterService.sidenav.toggle()
+  toogleSidenav(event: any) {
+    this.sideNav.toggle();
   }
 
 }

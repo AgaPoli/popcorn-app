@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { FilterService } from 'src/app/filter.service';
 
@@ -9,14 +9,18 @@ import { FilterService } from 'src/app/filter.service';
 })
 export class FilterWrapComponent implements OnInit {
 
+  @Output() toogle: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   constructor(private filterService: FilterService ) {}
 
-  ngOnInit() {
-    console.log(this.filterService)
+  ngOnInit() { }
+ 
+  toogleSidenav(){
+    this.toogle.emit(true);
   }
 
   test(){
-    // this.filterService.sidenav.toogle();
+    this.filterService.sidenav.toogle();
   }
 
 }

@@ -2,7 +2,8 @@
 
   <app-button-group id="button-group"></app-button-group>
   
-  <button id="filters" mat-button (click)="test()">
+  <button id="filters" mat-button 
+  (click)="toogleSidenav()">
     <i class="fas fa-filter "></i> FILTERS
   </button>
 
@@ -18,7 +19,6 @@
     id="reset"
     class="desktop"
     mat-flat-button
-    (click)="yearRelease.value = 1980"
   >Reset
   </button>
 </mat-toolbar>
