@@ -24,22 +24,21 @@ export class SearchComponent implements OnInit {
   }
 
   searchMovie(movieTitle: string): void {
-    console.log(movieTitle);
+   
     this.apiService.searchMovie(movieTitle)
     .then(
       movies => {
-        console.log(movies);
+     
         this.movies = movies.results; 
       }
     )
   }
 
   searchPerson(personName: string): void {
-    console.log(personName);
+   
     this.apiService.searchPerson(personName)
     .then(
-      persons => {
-        console.log(persons);
+      persons => {       
         this.name =  persons.results[0].name;
       }
     )

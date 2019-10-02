@@ -88,10 +88,14 @@ h2 {
 @media (min-width: 1024px) {
   mat-toolbar {
     display: grid;
-    grid-template-areas: "categories filters release_year genres rating reset";
+    grid-template-areas: "categories filters release_year genres rating reset . ";
     grid-template-columns: repeat(6, 1fr);
     padding-top: 0;
     padding-bottom: 0;
+    width: 100%;
+    // max-width: 1170px;
+    // margin-left: auto;
+    // margin-right: auto;
   }
 
   .desktop {

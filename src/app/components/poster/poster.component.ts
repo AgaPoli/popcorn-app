@@ -33,7 +33,6 @@ export class PosterComponent implements OnInit {
     this.apiService.getMovie(id)
       .then(
         data => {
-          console.log(data);
           this.movie = data;
         }
       ).finally(

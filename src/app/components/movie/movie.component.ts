@@ -28,8 +28,7 @@ export class MovieComponent implements OnInit {
 
   getMovie(id: number) {
     this.apiService.getMovie(id).then(data => {
-      console.log(data);
-      this.movie = data;
+       this.movie = data;
       this.getRating(this.movie);
     });
   }

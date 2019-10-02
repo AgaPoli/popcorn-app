@@ -81,12 +81,16 @@ mat-toolbar {
 
 @media (min-width: 1024px) {
   * {
-    color: $primary-dark-font;
+    color: $primary-dark-font;   
   }
 
   mat-toolbar {
-    grid-template-areas: "logo btn_group search account_btn menu_btn ";
-    grid-template-columns: 0.5fr 1.5fr 2fr 0.3fr 0.3fr;
+    grid-template-areas: ". logo btn_group search account_btn menu_btn .";
+    grid-template-columns: 0.1fr 0.5fr 1.5fr 2fr 0.3fr 0.3fr 0.1fr;
+    width: 100%;    
+    // max-width: 1170px;
+    // margin-left: auto;
+    // margin-right: auto;
   }
 
   #btn_group {

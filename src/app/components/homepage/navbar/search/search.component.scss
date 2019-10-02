@@ -8,7 +8,6 @@ input {
   background-size: 20px;
   height: 50%;
   transition: border-color 0.2s linear;
-  border: 1px solid #fcb500;
   padding: 4px 55px 4px 55px;
   border-radius: 2px;
 
@@ -20,3 +19,7 @@ input {
 mat-form-field {
   width: 100%;
 }
+// .mat-form-field-appearance-legacy .mat-form-field-underline {
+//   height: 0;
+//   color: white;
+// }
