@@ -186,7 +186,7 @@ body {
         text-decoration: none;
         &:hover {
             color: $primary-font;
-            text-decoration: underline; //ma byc podkreslnik zolty
+            text-decoration: underline;
         }
     }
     img {
@@ -198,8 +198,6 @@ body {
 // Od srednich w gore
 @mixin medium-up {
     @media (min-width: #{$bp-medium}) {
-        //800px#{}bo zapisane jako string
-        @content //(tu wstawiam dowolne deklaracje);;;;;;;;;
     }
 }
 
