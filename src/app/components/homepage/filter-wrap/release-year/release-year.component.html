@@ -1,12 +1,8 @@
 <button mat-button [matMenuTriggerFor]="menu">Release year</button>
 
-<mat-menu
-  #menu="matMenu"
-  panelClass="release-year"
-  backdropClass="release-year"
-  class="alfa"
->
- <app-release-year-content class="mat-menu-content"></app-release-year-content>
-
+<mat-menu #menu="matMenu" panelClass="release-year" backdropClass="release-year">
+    <app-release-year-content
+        class="mat-menu-content"
+        (click)="$event.stopPropagation()"
+    ></app-release-year-content>
 </mat-menu>
-

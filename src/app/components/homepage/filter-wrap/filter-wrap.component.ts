@@ -3,24 +3,22 @@ import { MatSidenav } from '@angular/material';
 import { FilterService } from 'src/app/filter.service';
 
 @Component({
-  selector: 'app-filter-wrap',
-  templateUrl: './filter-wrap.component.html',
-  styleUrls: ['./filter-wrap.component.scss']
+    selector: 'app-filter-wrap',
+    templateUrl: './filter-wrap.component.html',
+    styleUrls: ['./filter-wrap.component.scss']
 })
 export class FilterWrapComponent implements OnInit {
+    @Output() toogle: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  @Output() toogle: EventEmitter<boolean> = new EventEmitter<boolean>();
+    constructor(private filterService: FilterService) {}
 
-  constructor(private filterService: FilterService ) {}
+    ngOnInit() {}
 
-  ngOnInit() { }
- 
-  toogleSidenav(){
-    this.toogle.emit(true);
-  }
+    toogleSidenav() {
+        this.toogle.emit(true);
+    }
 
-  test(){
-    this.filterService.sidenav.toogle();
-  }
-
+    test() {
+        this.filterService.sidenav.toogle();
+    }
 }

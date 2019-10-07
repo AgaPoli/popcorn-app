@@ -4,54 +4,35 @@ import { Movie, PersonName } from 'src/app/models/movie.model';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+    selector: 'app-search',
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.scss']
 })
-
 export class SearchComponent implements OnInit {
+    movies: Movie[];
+    name: PersonName;
 
-  movies: Movie[];
-  name: PersonName
+    constructor(private apiService: ApiService, private router: Router) {}
 
-  constructor( 
-    private apiService: ApiService,
-    private router: Router
-  ) { }
+    ngOnInit() {}
 
-  ngOnInit() {
-    this.searchPerson('Pit');
-  }
+    searchMovie(movieTitle: string): void {
+        this.apiService.searchMovie(movieTitle).then(movies => {
+            this.movies = movies.results;
+        });
+    }
 
-  searchMovie(movieTitle: string): void {
-   
-    this.apiService.searchMovie(movieTitle)
-    .then(
-      movies => {
-     
-        this.movies = movies.results; 
-      }
-    )
-  }
+    searchPerson(personName: string): void {
+        this.apiService.searchPerson(personName).then(persons => {
+            this.name = persons.results[0].name;
+        });
+    }
 
-  searchPerson(personName: string): void {
-   
-    this.apiService.searchPerson(personName)
-    .then(
-      persons => {       
-        this.name =  persons.results[0].name;
-      }
-    )
-  }
+    getImagePath(posterPath: string): string {
+        return this.apiService.getImagePath(posterPath);
+    }
 
-  getImagePath(posterPath: string): string{
-    return this.apiService.getImagePath(posterPath);
-  }
-
-  redirectToMovie(id: number): void{
-    this.router.navigate(['movie',id]);
-  }
-
+    redirectToMovie(id: number): void {
+        this.router.navigate(['movie', id]);
+    }
 }
-
-

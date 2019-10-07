@@ -1,19 +1,16 @@
 <mat-card class="mat_card">
-  <img mat-card-image [src]="src" />
-  <mat-card-content>
-    <span class="text_highlighting imbd_name">IMBD</span>
-    <span class="imbd_img">
-      <a [href]="imdBase + rating.imdb_id" target="_blank">
-        <img
-          class="budget imbd_img"
-          src="../../../assets/images/imdb.png"
-        /> </a
-    ></span>
+    <img mat-card-image [src]="src" />
+    <mat-card-content>
+        <span class="text_highlighting imbd_name">IMBD</span>
+        <span class="imbd_img">
+            <a [href]="imdBase + rating.imdb_id" target="_blank">
+                <img class="budget imbd_img" src="/assets/images/imdb.png" /> </a
+        ></span>
 
-    <span class="text_highlighting rating_name ">Rating</span>
-    <span class="rating_average">{{ rating.vote_average }}</span>
+        <span class="text_highlighting rating_name ">Rating</span>
+        <span class="rating_average">{{ rating.vote_average }}</span>
 
-    <span class="text_highlighting runtime_name ">Runtim</span>
-    <span class="runtime_time">{{ rating.runtime }}</span>
-  </mat-card-content>
+        <span class="text_highlighting runtime_name ">Runtim</span>
+        <span class="runtime_time">{{ rating.runtime }}</span>
+    </mat-card-content>
 </mat-card>

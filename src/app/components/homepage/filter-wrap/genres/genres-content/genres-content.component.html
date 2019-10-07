@@ -1,5 +1,5 @@
 <span class="genres_grid">
-    <button *ngFor="let genre of genres" mat-stroked-button>
-        {{genre}}
+    <button *ngFor="let genre of genres" (click)="getMoviesForGenre(genre.id)" mat-stroked-button>
+        {{ genre.name }}
     </button>
 </span>

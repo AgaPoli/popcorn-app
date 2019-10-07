@@ -1,57 +1,55 @@
-@import "../../../../../variables";
+@import '../../../../../variables';
 
 .release-year {
-  display: grid;
-  grid-template-areas:
-    "title title reset"
-    "startYear slider endYear"
-    "thisYearBtn lastYearBtn .";
-  color: $primary-font;
-  padding: 2px;  
+    display: grid;
+    grid-template-areas:
+        'title title reset'
+        'startYear slider endYear'
+        'thisYearBtn lastYearBtn .';
+    color: $primary-font;
+    padding: 2px;
 
-  justify-items: center;
-  align-items: center;
+    justify-items: center;
+    align-items: center;
 }
 
 .title {
-  grid-area: title;
-  justify-self: baseline;
+    grid-area: title;
+    justify-self: baseline;
 }
 .reset {
-  grid-area: reset;
+    grid-area: reset;
 }
 .startYear {
-  grid-area: startYear;
+    grid-area: startYear;
 }
 .slider {
-  grid-area: slider;
+    grid-area: slider;
 }
 .endYear {
-  grid-area: endYear;
+    grid-area: endYear;
 }
 
 .thisYearBtn {
-
-  justify-self: baseline;
-  grid-area: thisYearBtn;
+    justify-self: baseline;
+    grid-area: thisYearBtn;
 }
 
 .lastYearBtn {
-
-  justify-self: end;
-  grid-area: lastYearBtn;
+    justify-self: end;
+    grid-area: lastYearBtn;
 }
 
 h2 {
-  font-size: $font-size-3;
-  color: $primary-font;
-  font-weight: 500;
+    font-size: $font-size-3;
+    color: $primary-font;
+    font-weight: 500;
 
-  letter-spacing: 0.0125em;
+    letter-spacing: 0.0125em;
 }
 
 .mat-flat-button {
-  color: $primary-dark-font;
-  background: none;
-  text-transform: uppercase;
+    color: $primary-dark-font;
+    background: none;
+    text-transform: uppercase;
 }

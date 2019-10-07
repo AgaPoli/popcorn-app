@@ -1,108 +1,108 @@
-@import "../../../../variables";
+@import '../../../../variables';
 
 .example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .example-sidenav {
-  padding: 20px;
-  z-index: 10;
+    padding: 20px;
+    z-index: 10;
 }
 
 .main-wraper {
-  max-width: 750px;
-  margin: 0 20vh;
-  background-color: $primary;
+    max-width: 750px;
+    margin: 0 20vh;
+    background-color: $primary;
 }
 
 mat-toolbar {
-  display: grid;
-  grid-template-areas: "categories filters";
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
-  font-size: $font-size-base;
-  color: $primary-font;
+    display: grid;
+    grid-template-areas: 'categories filters';
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    font-size: $font-size-base;
+    color: $primary-font;
 
-  background-color: $primary;
+    background-color: $primary;
 }
 
 #categories {
-  grid-area: categories;
+    grid-area: categories;
 }
 
 #filters {
-  grid-area: filters;
-  color: $primary-darkest-font;
+    grid-area: filters;
+    color: $primary-darkest-font;
 }
 
 #release_year {
-  grid-area: release_year;
+    grid-area: release_year;
 }
 
 #genres {
-  grid-area: genres;
+    grid-area: genres;
 }
 #rating {
-  grid-area: rating;
+    grid-area: rating;
 }
 #reset {
-  grid-area: reset;
-  color: $primary-darkest-font;
+    grid-area: reset;
+    color: $primary-darkest-font;
 }
 
 .mat-flat-button {
-  color: $primary-font;
-  background: none;
-  text-transform: uppercase;
+    color: $primary-font;
+    background: none;
+    text-transform: uppercase;
 }
 .mat-toolbar {
-  background-color: $primary-dark;
+    background-color: $primary-dark;
 }
 
 #logo {
-  max-height: 50px;
-  grid-area: logo;
-  border-radius: 10px;
-  padding: 6px;
+    max-height: 50px;
+    grid-area: logo;
+    border-radius: 10px;
+    padding: 6px;
 }
 
 h2 {
-  font-size: $font-size-3;
-  color: $primary-font;
-  font-weight: 500;
-  letter-spacing: 0.0125em;
+    font-size: $font-size-3;
+    color: $primary-font;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
 }
 .mat-flat-button {
-  color: $primary-darkest-font;
-  background: none;
-  text-transform: uppercase;
+    color: $primary-darkest-font;
+    background: none;
+    text-transform: uppercase;
 }
 
 .mat-menu-panel {
-  padding: 18px;
+    padding: 18px;
 }
 
 @media (min-width: 1024px) {
-  mat-toolbar {
-    display: grid;
-    grid-template-areas: "categories filters release_year genres rating reset . ";
-    grid-template-columns: repeat(6, 1fr);
-    padding-top: 0;
-    padding-bottom: 0;
-    width: 100%;
-    // max-width: 1170px;
-    // margin-left: auto;
-    // margin-right: auto;
-  }
+    mat-toolbar {
+        display: grid;
+        grid-template-areas: 'categories filters release_year genres rating reset . ';
+        grid-template-columns: repeat(6, 1fr);
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+        // max-width: 1170px;
+        // margin-left: auto;
+        // margin-right: auto;
+    }
 
-  .desktop {
-    display: grid !important;
-  }
+    .desktop {
+        display: grid !important;
+    }
 }
 
 .mat-toolbar {
-  background-color: $primary;
+    background-color: $primary;
 }

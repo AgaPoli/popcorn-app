@@ -1,26 +1,25 @@
 body {
-  font-family: 'Swanky and Moo Moo', cursive;
-  font-size: 14px;
+    font-family: 'Swanky and Moo Moo', cursive;
+    font-size: 14px;
 }
 
 .main-wraper {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "toolbar toolbar toolbar toolbar" "main_contnent main_contnent main_contnent main_contnent";
-      
-    }
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: 'toolbar toolbar toolbar toolbar' 'main_contnent main_contnent main_contnent main_contnent';
+}
 
 app-filter-wrap {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: toolbar;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: toolbar;
 }
 
 app-main-content {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: main_contnent;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: main_contnent;
 }
 /*# sourceMappingURL=app.component.css.map */

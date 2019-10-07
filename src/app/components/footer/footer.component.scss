@@ -1,20 +1,20 @@
-@import "../../../variables";
+@import '../../../variables';
 footer {
-  width: 100%;
-  bottom: 0;
-  max-height: 50px;
+    width: 100%;
+    bottom: 0;
+    max-height: 50px;
 }
 
 h5 {
-  font-size: $font-size-5;
-  color: $accent;
+    font-size: $font-size-5;
+    color: $accent;
 }
 
 a {
-  font-size: $font-size-5;
-  color: $primary-font;
+    font-size: $font-size-5;
+    color: $primary-font;
 }
 
 hr {
-  background-color:$primary-darkest-font;
+    background-color: $primary-darkest-font;
 }

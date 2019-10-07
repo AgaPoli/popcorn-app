@@ -1,108 +1,108 @@
-@import "../../../../variables";
+@import '../../../../variables';
 
 mat-toolbar {
-  display: grid;
-  grid-template-areas:
-    "hamburger logo account_btn menu_btn"
-    "search search search search";
-  grid-template-columns: 1fr 4fr 0.5fr 0.5fr;
-  grid-column-gap: 1em;
-  justify-items: center;
-  align-items: center;
-  color: $primary-dark-font;
-  height: fit-content;
-  margin-bottom: 0;
-  padding-bottom: 6px !important;
-  padding-top: 6px !important;
-  font-size: $font-size-base;
+    display: grid;
+    grid-template-areas:
+        'hamburger logo account_btn menu_btn'
+        'search search search search';
+    grid-template-columns: 1fr 4fr 0.5fr 0.5fr;
+    grid-column-gap: 1em;
+    justify-items: center;
+    align-items: center;
+    color: $primary-dark-font;
+    height: fit-content;
+    margin-bottom: 0;
+    padding-bottom: 6px !important;
+    padding-top: 6px !important;
+    font-size: $font-size-base;
 }
 
 #logo {
-  max-height: 100%;
-  grid-area: logo;
-  border-radius: 15px;
-  padding: 2px;
-  justify-self: center;
+    max-height: 100%;
+    grid-area: logo;
+    border-radius: 15px;
+    padding: 2px;
+    justify-self: center;
 }
 
 #new_movie1 {
-  grid-area: new_movie1;
+    grid-area: new_movie1;
 }
 
 #new_movie2 {
-  grid-area: new_movie2;
+    grid-area: new_movie2;
 }
 
 #new_movie3 {
-  grid-area: new_movie3;
+    grid-area: new_movie3;
 }
 
 #search {
-  grid-area: search;
-  width: 100%;
-  background-color: white;
-  max-height: 60%;
-  color: $primary-dark-font;
-  font-size: $font-size-base;
-  padding-bottom: 10px;
-  line-height: 30px;
-  border-radius: 2px;
+    grid-area: search;
+    width: 100%;
+    background-color: white;
+    max-height: 60%;
+    color: $primary-dark-font;
+    font-size: $font-size-base;
+    padding-bottom: 10px;
+    line-height: 30px;
+    border-radius: 2px;
 }
 
 #account_btn {
-  grid-area: account_btn;
-  justify-self: end;
-  align-self: center;
+    grid-area: account_btn;
+    justify-self: end;
+    align-self: center;
 }
 
 #menu_btn {
-  grid-area: menu_btn;
-  justify-self: end;
+    grid-area: menu_btn;
+    justify-self: end;
 }
 
 #hamburger {
-  grid-area: hamburger;
-  justify-self: baseline;
+    grid-area: hamburger;
+    justify-self: baseline;
 }
 
 #btn_group {
-  display: grid;
-  grid-template-areas: "new_movie1 new_movie2 new_movie3";
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1em;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
+    display: grid;
+    grid-template-areas: 'new_movie1 new_movie2 new_movie3';
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
 }
 
 .mat-toolbar {
-  background-color: $primary-dark;
+    background-color: $primary-dark;
 }
 
 @media (min-width: 1024px) {
-  * {
-    color: $primary-dark-font;   
-  }
+    * {
+        color: $primary-dark-font;
+    }
 
-  mat-toolbar {
-    grid-template-areas: ". logo btn_group search account_btn menu_btn .";
-    grid-template-columns: 0.1fr 0.5fr 1.5fr 2fr 0.3fr 0.3fr 0.1fr;
-    width: 100%;    
-    // max-width: 1170px;
-    // margin-left: auto;
-    // margin-right: auto;
-  }
+    mat-toolbar {
+        grid-template-areas: '. logo btn_group search account_btn menu_btn .';
+        grid-template-columns: 0.1fr 0.5fr 1.5fr 2fr 0.3fr 0.3fr 0.1fr;
+        width: 100%;
+        // max-width: 1170px;
+        // margin-left: auto;
+        // margin-right: auto;
+    }
 
-  #btn_group {
-    grid-area: btn_group;
-    display: grid !important;
-  }
+    #btn_group {
+        grid-area: btn_group;
+        display: grid !important;
+    }
 
-  #hamburger {
-    display: none;
-  }
+    #hamburger {
+        display: none;
+    }
 
-  #logo {
-    justify-self: baseline;
-  }
+    #logo {
+        justify-self: baseline;
+    }
 }

@@ -1,13 +1,13 @@
-@import "../../../../../variables";
+@import '../../../../../variables';
 
 .genres_grid {
-  color: $primary-font;
-  overflow: visible !important;
-  & > button {
-    margin: 2px !important;
-  }
+    color: $primary-font;
+    overflow: visible !important;
+    & > button {
+        margin: 2px !important;
+    }
 }
 
 app-genres {
-  text-align: center;
+    text-align: center;
 }

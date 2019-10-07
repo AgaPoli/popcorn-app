@@ -1,33 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
-  selector: 'app-genres-content',
-  templateUrl: './genres-content.component.html',
-  styleUrls: ['../genres.component.scss']
+    selector: 'app-genres-content',
+    templateUrl: './genres-content.component.html',
+    styleUrls: ['../genres.component.scss']
 })
 export class GenresContentComponent implements OnInit {
+    genres: string[] = [];
 
-  genres: string[] = [
-    'Commedy',
-    'Crime',
-    'Horror',
-    'Action',
-    'Animation',
-    'Adventure',
-    'Documentary',
-    'Drama',
-    'Fantasy',
-    'Musical',
-    'Crime',
-    'Historical',
-    'Romance',
-    'Science-Fiction',
-    'Western'
-  ];
+    constructor(private apiService: ApiService) {}
 
-  constructor() { }
+    ngOnInit() {
+        this.apiService.getGenreForMovies().then(genres => {
+            this.genres = genres.genres;
+        });
+    }
 
-  ngOnInit() {
-  }
-
+    getMoviesForGenre(genreId: number) {
+        this.apiService.activeCategory.next({ category: null, genre: genreId });
+    }
 }

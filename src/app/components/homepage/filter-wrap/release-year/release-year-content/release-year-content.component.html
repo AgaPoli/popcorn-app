@@ -1,28 +1,27 @@
-<span class="release-year" >
-<h2 class="title">Relase year</h2>
-<button mat-flat-button class="reset" (click)="yearRelease.value = 1980">
-  Reset
-</button>
+<span class="release-year">
+    <h2 class="title">Relase year</h2>
+    <button mat-flat-button class="reset" (click)="yearRelease.value = 2000">
+        Reset
+    </button>
 
-<span class="startYear">1980</span>
+    <span class="startYear">1980</span>
 
-<mat-slider
-  class="slider"
-  #yearRelease
-  min="1980"
-  max="2019"
-  thumbLabel="true"
-></mat-slider>
+    <mat-slider
+        class="slider"
+        #yearRelease
+        min="1980"
+        max="2019"
+        thumbLabel="true"
+        value="2000"
+    ></mat-slider>
 
-<span class="endYear">2019</span>
+    <span class="endYear">2019</span>
 
+    <button mat-stroked-button class="thisYearBtn" (click)="yearRelease.value = 2019">
+        This year
+    </button>
 
-
-<button mat-stroked-button class="thisYearBtn" (click)="yearRelease.value = 2019">
-  This year
-</button>
-
-<button mat-stroked-button class="lastYearBtn " (click)="yearRelease.value = 1995">
-  Last year
-</button>
+    <button mat-stroked-button class="lastYearBtn " (click)="yearRelease.value = lastYear">
+        Last year
+    </button>
 </span>

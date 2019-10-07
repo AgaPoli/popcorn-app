@@ -1,22 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
-import { environment } from "../../../../environments/environment";
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../environments/environment';
 import { ApiService } from 'src/app/api.service';
 
-
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+    constructor(private apiService: ApiService) {}
 
-  constructor(private apiService: ApiService) { }
+    ngOnInit() {}
 
-  ngOnInit() {}
-
-  setCategory(category: string): void{
-    this.apiService.activeCategory.next(category);
-  }
-
+    setCategory(category: string): void {
+        this.apiService.activeCategory.next({ category: category, genre: null });
+    }
 }

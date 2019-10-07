@@ -1,8 +1,5 @@
-<button  mat-button [matMenuTriggerFor]="menu">Raiting</button>
+<button mat-button [matMenuTriggerFor]="menu">Raiting</button>
 
-
-<mat-menu #menu="matMenu" >
-
-  <app-rating-content ></app-rating-content>
-
+<mat-menu #menu="matMenu">
+    <app-rating-content (click)="$event.stopPropagation()"></app-rating-content>
 </mat-menu>

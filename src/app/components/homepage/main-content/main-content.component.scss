@@ -1,28 +1,27 @@
-@import "../../../../variables";
+@import '../../../../variables';
 
 #image_container {
-  width: 100%;
-  background-color: $primary-light;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  margin-bottom: 20px;
-  grid-gap: 1em;
-  padding: 10px;
-  width: 100%;
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-
-
-  .title-poster {
-    height: 250px;
+    width: 100%;
+    background-color: $primary-light;
     display: grid;
-    grid-template-areas: "image";
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin-bottom: 20px;
+    grid-gap: 1em;
+    padding: 10px;
+    width: 100%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
 
-    img {
-      grid-area: image;
-      object-fit: cover;
-      height: 100%;
+    .title-poster {
+        height: 250px;
+        display: grid;
+        grid-template-areas: 'image';
+
+        img {
+            grid-area: image;
+            object-fit: cover;
+            height: 100%;
+        }
     }
-  }
 }

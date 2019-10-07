@@ -1,12 +1,28 @@
-<span class="rating" >
-<h2 class="title">Raiting</h2>
- 
-<button mat-flat-button class="reset_button" (click)="yearRelease.value = 1980">Reset</button>
-  <img class="imdb_img"  [routerLink]="['/']" id="logo" src="assets/images/imdb.png" alt="Logo">
-<span class="imdb_span">IMDb</span>
-<mat-slider class="imdb_slider" #yearRelease min="0" max="10" thumbLabel="true"></mat-slider>
+<pre>Feature coming soon!</pre>
+<span class="rating">
+    <h2 class="title">Raiting</h2>
 
-<img class="tomato_img" [routerLink]="['/']" id="logo" src="assets/images/Rotten_Tomatoes.png" alt="Logo">
-<span class="tomato_span">Tomato</span>
- <mat-slider class="tomato_slider" min="0" max="10" thumbLabel="true"></mat-slider>
+    <button mat-flat-button class="reset_button" (click)="tomato.value = 5; imdb.value = 5">
+        Reset
+    </button>
+    <img class="imdb_img" [routerLink]="['/']" id="logo" src="assets/images/imdb.png" alt="Logo" />
+    <span class="imdb_span">IMDb</span>
+    <mat-slider class="imdb_slider" #imdb min="0" max="10" value="7" thumbLabel="true"></mat-slider>
+
+    <img
+        class="tomato_img"
+        [routerLink]="['/']"
+        id="logo"
+        src="assets/images/Rotten_Tomatoes.png"
+        alt="Logo"
+    />
+    <span class="tomato_span">Tomato</span>
+    <mat-slider
+        class="tomato_slider"
+        #tomato
+        min="0"
+        max="10"
+        value="4"
+        thumbLabel="true"
+    ></mat-slider>
 </span>

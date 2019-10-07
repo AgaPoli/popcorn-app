@@ -1,57 +1,57 @@
-@import "../../../../variables";
+@import '../../../../variables';
 
 .mat-card-content {
-  display: grid;
-  grid-template-columns: repeat(2, 0.5fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "imbd_name imbd_img "
-    "rating_name rating_average"
-    "runtime_name runtime_time ";
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        'imbd_name imbd_img '
+        'rating_name rating_average'
+        'runtime_name runtime_time ';
 
-  width: 30vh;
-  justify-items: center;
-  align-items: center;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
 }
 
 .imbd_name {
-  grid-area: imbd_name;
+    grid-area: imbd_name;
 }
 .imbd_img {
-  grid-area: imbd_img;
+    grid-area: imbd_img;
 }
 .rating_name {
-  grid-area: rating_name;
+    grid-area: rating_name;
 }
 .rating_average {
-  grid-area: rating_average;
+    grid-area: rating_average;
 }
 .runtime_name {
-  grid-area: runtime_name;
+    grid-area: runtime_name;
 }
 .runtime_time {
-  grid-area: runtime_time;
+    grid-area: runtime_time;
 }
 
 mat-card {
-  text-align: center;
+    text-align: center;
 }
 .mat_card {
-  background-color: $primary-light;
-  padding-top: 10px;
-  border-radius: 0;
-  border-color: $primary-light;
-  color: $primary-font;
-  font-size: 1rem;
-  line-height: 1.5em;
-  box-shadow: none;
+    background-color: $primary-light;
+    padding-top: 10px;
+    border-radius: 0;
+    border-color: $primary-light;
+    color: $primary-font;
+    font-size: 1rem;
+    line-height: 1.5em;
+    box-shadow: none;
 }
 
 .mat-card-image:first-child {
-  margin-top: 0;
-  border-radius: 0;
+    margin-top: 0;
+    border-radius: 0;
 }
 
 .img_imdb {
-  max-width: 50px;
+    max-width: 50px;
 }

@@ -1,31 +1,31 @@
-@import "../../../../../variables";
+@import '../../../../../variables';
 
 mat-button-toggle-group {
-  --border-size: 0.5px;
-  box-shadow: none;
-  mat-button-toggle:not(.mat-button-toggle-checked) {
-    border: var(--border-size) solid $primary-font;
-    transition: all 0.5s;
-    border-right: none;
-    color: $primary-font;
-    background-color: $primary;
-    font-size: $font-size-base;
-    font-weight: 400;
+    --border-size: 0.5px;
+    box-shadow: none;
+    mat-button-toggle:not(.mat-button-toggle-checked) {
+        border: var(--border-size) solid $primary-font;
+        transition: all 0.5s;
+        border-right: none;
+        color: $primary-font;
+        background-color: $primary;
+        font-size: $font-size-base;
+        font-weight: 400;
 
-    &:active {
-      color: $primary-font;
-      outline: none;
-      box-shadow: none;
+        &:active {
+            color: $primary-font;
+            outline: none;
+            box-shadow: none;
+        }
+        &:last-child {
+            border-right: var(--border-size) solid $primary-font;
+        }
     }
-    &:last-child {
-      border-right: var(--border-size) solid $primary-font;
-    }
-  }
 }
 .nav_btn {
-  color: $primary-font;
-  border-radius: 0;
-  &:hover {
-    border-bottom: 4px solid $accent;
-  }
+    color: $primary-font;
+    border-radius: 0;
+    &:hover {
+        border-bottom: 4px solid $accent;
+    }
 }

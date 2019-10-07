@@ -1,78 +1,73 @@
-@import "../../../variables";
+@import '../../../variables';
 
 .movie {
-  display: grid;
-  grid-template-areas:
-    "title title title title"
-    "details details details details"
-    "details details details details"
-    "photo photo photo photo";
+    display: grid;
+    grid-template-areas:
+        'title title title title'
+        'details details details details'
+        'details details details details'
+        'photo photo photo photo';
 }
 a {
-  grid-area: title;
-  padding-left: 10px;
+    grid-area: title;
+    padding-left: 10px;
 }
 app-details-photo {
-  grid-area: photo;
+    grid-area: photo;
 }
 .movie_overview {
-  grid-area: details;
+    grid-area: details;
 }
-app-details-infos {
-  padding-right: 15px;
-  padding-left: 40px;
-  }
 
 @media (min-width: 1024px) {
-  .movie {
-    padding-top: 40px;
-    grid-template-rows: 0 8% 92%;
-    grid-template-areas:
-      "slider slider slier slier"
-      "photo title title title"
-      "photo details details details";
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-  }
+    .movie {
+        padding-top: 40px;
+        grid-template-rows: 0 8% 92%;
+        grid-template-areas:
+            'slider slider slier slier'
+            'photo title title title'
+            'photo details details details';
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
 
-  .movie_title {
-    font-size: $font-size-4;
-  }
+    .movie_title {
+        font-size: $font-size-4;
+    }
 }
 .movie_title {
-  font-size: $font-size-2;
-  line-height: $line-height-lg;
-  color: white;
-  display: inline-block;
+    font-size: $font-size-2;
+    line-height: $line-height-lg;
+    color: white;
+    display: inline-block;
 }
 .movie_relase_date {
-  display: inline-block;
-  margin-left: 1em;
+    display: inline-block;
+    margin-left: 1em;
 }
 p {
-  font-size: 16px;
-  line-height: $line-height-lg;
-  padding-left: 10px;
+    font-size: 16px;
+    line-height: $line-height-lg;
+    padding-left: 10px;
 }
 
 ul {
-  list-style-type: none;
-  line-height: 2em;
-  border-top: 1px solid #4c5a67;
+    list-style-type: none;
+    line-height: 2em;
+    border-top: 1px solid #4c5a67;
 
-  li {
-    line-height: 1.5em;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  .watch_on{
-    border-top:0;
-  }
+    li {
+        line-height: 1.5em;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .watch_on {
+        border-top: 0;
+    }
 }
 
 .movie_info {
-  padding-left: 10px;
+    padding-left: 10px;
 }
-

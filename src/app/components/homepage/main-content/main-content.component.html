@@ -1,5 +1,5 @@
 <div id="image_container">
-  <div *ngFor="let movie of movies" class="title-poster" [routerLink]="['/movie', movie.id]">
-    <img [src]="getImagePath(movie.poster_path)">
-  </div>
+    <div *ngFor="let movie of movies" class="title-poster" [routerLink]="['/movie', movie.id]">
+        <img [src]="getImagePath(movie.poster_path)" />
+    </div>
 </div>

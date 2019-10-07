@@ -1,12 +1,14 @@
-@import "../../../variables";
+@import '../../../variables';
 
 mat-sidenav {
     width: 40vh;
-    background-color:$primary-light;
-    .sidenav-content{
+    background-color: $primary-light;
+    .sidenav-content {
         display: grid;
-        grid-template-rows:  50px repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-gap: 1em;
-       
+        margin-top: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
     }
-  }  
+}

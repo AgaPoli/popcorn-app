@@ -1,25 +1,11 @@
 <mat-toolbar>
+    <app-button-group id="button-group"></app-button-group>
 
-  <app-button-group id="button-group"></app-button-group>
-  
-  <button id="filters" mat-button 
-  (click)="toogleSidenav()">
-    <i class="fas fa-filter "></i> FILTERS
-  </button>
+    <button id="filters" mat-button (click)="toogleSidenav()">
+        <i class="fas fa-filter "></i> FILTERS
+    </button>
 
-  <app-release-year
-    hidden
-    id="release_year"
-    class="c-btn desktop"
-  ></app-release-year>
-  <app-genres hidden id="genres" class="c-btn desktop"></app-genres>
-  <app-rating hidden id="rating" class="c-btn desktop"></app-rating>
-  <button
-    hidden
-    id="reset"
-    class="desktop"
-    mat-flat-button
-  >Reset
-  </button>
+    <app-release-year hidden id="release_year" class="c-btn desktop"></app-release-year>
+    <app-genres hidden id="genres" class="c-btn desktop"></app-genres>
+    <app-rating hidden id="rating" class="c-btn desktop"></app-rating>
 </mat-toolbar>
-

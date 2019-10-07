@@ -1,16 +1,16 @@
 footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-color: #fac833;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #fac833;
 }
 
 h5 {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 a {
-  font-size: 12px;
-  color: #505050;
+    font-size: 12px;
+    color: #505050;
 }
 /*# sourceMappingURL=footer.component.css.map */

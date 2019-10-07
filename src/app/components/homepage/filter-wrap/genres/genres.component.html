@@ -1,4 +1,4 @@
 <button mat-button [matMenuTriggerFor]="menu">Genres</button>
-<mat-menu #menu="matMenu">
-     <app-genres-content></app-genres-content>
+<mat-menu #menu="matMenu" role="menuitemcheckbox">
+    <app-genres-content (click)="$event.stopPropagation()"></app-genres-content>
 </mat-menu>

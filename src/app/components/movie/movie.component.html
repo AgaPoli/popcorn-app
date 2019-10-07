@@ -1,108 +1,104 @@
 <div class="movie" *ngIf="movie">
-  <app-details-photo
-    [src]="getImagePath(movie.poster_path)"
-    [rating]="rating"
-  ></app-details-photo>
-  <a [href]="movie.homepage">
-    <h1 class="movie_title movie_info">{{ movie.title }}</h1>
-  </a>
-  <a [href]="movie.homepage">
-    <h1 class="movie_title movie_info">{{ movie.title }}</h1>
-    <h2 class="movie_relase_date">({{ movie.release_date }})</h2>
-  </a>
-  <div class="movie_overview ">
-    <ul class="movie_info">
-      <li class="watch_on">
-        <span class="text_highlighting"
-          >WATCH ON<br />
+    <app-details-photo
+        [src]="getImagePath(movie.poster_path)"
+        [rating]="rating"
+    ></app-details-photo>
+    <a [href]="movie.homepage">
+        <h1 class="movie_title movie_info">{{ movie.title }}</h1>
+    </a>
+    <a [href]="movie.homepage">
+        <h1 class="movie_title movie_info">{{ movie.title }}</h1>
+        <h2 class="movie_relase_date">({{ movie.release_date }})</h2>
+    </a>
+    <div class="movie_overview ">
+        <ul class="movie_info">
+            <li class="watch_on">
+                <span class="text_highlighting"
+                    >WATCH ON
+                    <br />
 
-          <a href="https://www.netflix.com/no-en/"
-            ><img
-              class="budget"
-              src="http://fanmovie.info/images/provider/netflix.jpeg"
-              alt="Logo"
-          /></a>
-          <a
-            href="https://www.amazon.de/gp/video/storefront/ref=topnav_storetab_atv?node=3010075031"
-            ><img
-              class="budget"
-              src="http://fanmovie.info/images/provider/amazon-prime-video.jpeg"
-              alt="Logo"
-          /></a>
-          <a
-            href="https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F"
-            ><img
-              class="budget"
-              src="http://fanmovie.info/images/provider/hulu.jpeg"
-              alt="Logo"
-          /></a>
-          <a href="https://no.hbonordic.com/"
-            ><img
-              class="budget"
-              src="http://fanmovie.info/images/provider/hbo-now.jpeg"
-              alt="Logo"
-          /></a>
-          <a href="https://www.youtube.com/?gl=DE&hl=NO"
-            ><img
-              class="budget"
-              src="http://fanmovie.info/images/provider/youtube.jpeg"
-              alt="Logo"
-          /></a>
-          <a href="https://play.google.com/store/movies?hl=NO"
-            ><img
-              class="budget"
-              src="http://fanmovie.info/images/provider/google-play-movies.jpeg"
-              alt="Logo"
-          /></a>
-          <a href="https://www.apple.com/itunes/">
-            <img
-              class="budget"
-              src="http://fanmovie.info/images/provider/apple-itunes.jpeg"
-              alt="Logo"
-          /></a>
-          <a
-            href="https://www.amazon.de/b/ref=dv_web_nav_sf_tv?node=3015916031&ie=UTF8"
-            ><img
-              class="budget"
-              src="http://fanmovie.info/images/provider/amazon-video.jpeg"
-              alt="Logo"
-          /></a>
-        </span>
-      </li>
-    </ul>
-    <br />
-    <app-details-infos [src]="movie.overview"></app-details-infos>
+                    <a href="https://images.justwatch.com/icon/430997/s100"
+                        ><img
+                            class="budget"
+                            src="https://fanmovie.info/images/provider/netflix.jpeg"
+                            alt="Logo"
+                    /></a>
+                    <a
+                        href="https://www.amazon.de/gp/video/storefront/ref=topnav_storetab_atv?node=3010075031"
+                        ><img
+                            class="budget"
+                            src="https://fanmovie.info/images/provider/amazon-prime-video.jpeg"
+                            alt="Logo"
+                    /></a>
+                    <a
+                        href="https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F"
+                        ><img
+                            class="budget"
+                            src="http://fanmovie.info/images/provider/hulu.jpeg"
+                            alt="Logo"
+                    /></a>
+                    <a href="https://no.hbonordic.com/"
+                        ><img
+                            class="budget"
+                            src="http://fanmovie.info/images/provider/hbo-now.jpeg"
+                            alt="Logo"
+                    /></a>
+                    <a href="https://www.youtube.com/?gl=DE&hl=NO"
+                        ><img
+                            class="budget"
+                            src="https://fanmovie.info/images/provider/youtube.jpeg"
+                            alt="Logo"
+                    /></a>
+                    <a href="httpss://play.google.com/store/movies?hl=NO"
+                        ><img
+                            class="budget"
+                            src="https://fanmovie.info/images/provider/google-play-movies.jpeg"
+                            alt="Logo"
+                    /></a>
+                    <a href="https://www.apple.com/itunes/">
+                        <img
+                            class="budget"
+                            src="https://fanmovie.info/images/provider/apple-itunes.jpeg"
+                            alt="Logo"
+                    /></a>
+                    <a href="https://www.amazon.de/b/ref=dv_web_nav_sf_tv?node=3015916031&ie=UTF8"
+                        ><img
+                            class="budget"
+                            src="https://fanmovie.info/images/provider/amazon-video.jpeg"
+                            alt="Logo"
+                    /></a>
+                </span>
+            </li>
+        </ul>
+        <br />
+        <app-details-infos [src]="movie.overview"></app-details-infos>
 
-    <span class="text_highlighting">SPOKEN LANGUGES</span>
-    <ul *ngIf="0 < movie.spoken_languages.length" class="movie_info">
-      <li
-        class="movie_spoken_languages "
-        *ngFor="let language of movie.spoken_languages"
-      >
-        {{ language.name }}
-      </li>
-    </ul>
-
-    <ul *ngIf="0 < movie.production_countries.length" class="movie_info">
-      <li
-        class="movie_production_countries"
-        *ngFor="let country of movie.production_countries"
-      >
+        <span class="text_highlighting">SPOKEN LANGUGES</span>
+        <ul *ngIf="0 < movie.spoken_languages.length" class="movie_info">
+            <li class="movie_spoken_languages " *ngFor="let language of movie.spoken_languages">
+                {{ language.name }}
+            </li>
+        </ul>
         <span class="text_highlighting">PRODUCTION COUNTRY</span> <br />
-        {{ country.name }}
-      </li>
-    </ul>
-    <ul class="movie_info">
-      <li>
+        <ul *ngIf="0 < movie.production_countries.length" class="movie_info">
+            <li
+                class="movie_production_countries"
+                *ngFor="let country of movie.production_countries"
+            >
+                {{ country.name }}
+            </li>
+        </ul>
         <span class="text_highlighting">MOVIE BUDGET </span><br />
-        <h2 class="movie_budget">{{ movie.budget }}</h2>
-      </li>
-    </ul>
-    <ul class="movie_info">
-      <li>
+        <ul class="movie_info">
+            <li>
+                <h2 class="movie_budget">{{ bugetFormater(movie.budget) }}</h2>
+            </li>
+        </ul>
         <span class="text_highlighting">TAG LINE</span><br />
-        <h2 class="movie_tagline">{{ movie.tagline }}</h2>
-      </li>
-    </ul>
-  </div>
+        <ul class="movie_info">
+            <li>
+                <h2 class="movie_tagline">{{ movie.tagline }}</h2>
+            </li>
+        </ul>
+    </div>
 </div>

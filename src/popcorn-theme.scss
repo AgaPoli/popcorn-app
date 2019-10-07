@@ -28,11 +28,11 @@ $gutter: $grid-base * 1.5;
 $border-radius: $grid-base * 0.5;
 
 // Breakpoint
-$bp-medium: "800px";
-$bp-large: "1200px";
+$bp-medium: '800px';
+$bp-large: '1200px';
 
 // Themes
-@import "~@angular/material/theming";
+@import '~@angular/material/theming';
 
 // Plus imports for other components in your app.
 
@@ -51,11 +51,7 @@ $popcorn-app-accent: mat-palette($mat-yellow, 500);
 $popcorn-app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$popcorn-app-theme: mat-light-theme(
-  $popcorn-app-primary,
-  $popcorn-app-accent,
-  $popcorn-app-warn
-);
+$popcorn-app-theme: mat-light-theme($popcorn-app-primary, $popcorn-app-accent, $popcorn-app-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -63,136 +59,153 @@ $popcorn-app-theme: mat-light-theme(
 @include angular-material-theme($popcorn-app-theme);
 
 @mixin mix-app-theme($app-theme) {
-  $primary-pallet: map-get($app-theme, primary);
-  $accent-pallet: map-get($app-theme, accent);
-  $warn-pallet: map-get($app-theme, warn);
+    $primary-pallet: map-get($app-theme, primary);
+    $accent-pallet: map-get($app-theme, accent);
+    $warn-pallet: map-get($app-theme, warn);
 
-  :root {
-    --popcorn-primary: #{mat-color($primary-pallet)};
-    --popcorn-primary-dark: #{mat-color($accent-pallet, darker-contrast)};
-    --popcorn-primary-light: #{mat-color($accent-pallet, default-contrast)};
-    --popcorn-accent: #{mat-color($accent-pallet)};
-    --popcorn-warn: #{mat-color($warn-pallet)};
-  }
-  .mat-menu-content {
-    background-color: mat-color($primary-pallet);
-  }
-  .mat-button-toggle {
-    background-color: mat-color($primary-pallet);
-    color: mat-color($primary-pallet, lighter-contrast);
-  }
+    :root {
+        --popcorn-primary: #{mat-color($primary-pallet)};
+        --popcorn-primary-dark: #{mat-color($accent-pallet, darker-contrast)};
+        --popcorn-primary-light: #{mat-color($accent-pallet, default-contrast)};
+        --popcorn-accent: #{mat-color($accent-pallet)};
+        --popcorn-warn: #{mat-color($warn-pallet)};
+    }
+    .mat-menu-content {
+        background-color: mat-color($primary-pallet);
+    }
+    .mat-button-toggle {
+        background-color: mat-color($primary-pallet);
+        color: mat-color($primary-pallet, lighter-contrast);
+    }
 
-  .mat-button-toggle-checked {
-    background-color: mat-color($accent-pallet);
-    color: mat-color($accent-pallet, darker-contrast);
-  }
+    .mat-button-toggle-checked {
+        background-color: mat-color($accent-pallet);
+        color: mat-color($accent-pallet, darker-contrast);
+    }
 
-  //   .mat-menu-panel{
-  //     max-width: unset !important; //wszystkie menu ma max wysokosc wylaczona (bylo na sztywno)
+    //   .mat-menu-panel{
+    //     max-width: unset !important; //wszystkie menu ma max wysokosc wylaczona (bylo na sztywno)
 
-  .mat-stroked-button {
-    transition: all 0.5s;
-    color: $primary-dark-font;
-    border-radius: 0 !important;
-    font-size: 1em;
-    font-weight: 400;
-    border: 0.7px solid $primary-dark-font !important;
-    margin: 4px;
+    .mat-stroked-button {
+        transition: all 0.5s;
+        color: $primary-dark-font;
+        border-radius: 0 !important;
+        font-size: 1em;
+        font-weight: 400;
+        border: 0.7px solid $primary-dark-font !important;
+        margin: 4px;
 
-    width: max-content;
+        width: max-content;
 
-    white-space: normal !important;
-  }
+        white-space: normal !important;
+    }
 
-  .mat-form-field-infix {
-    padding: 0 !important;
-    border-top: 0 !important;
-  }
-  .mat-form-field-wrapper {
-    padding-bottom: 0 !important;
-  }
-  .mat-form-field-subscript-wrapper {
-    margin-top: 0 !important;
-  }
+    .mat-form-field-infix {
+        padding: 0 !important;
+        border-top: 0 !important;
+    }
+    .mat-form-field-wrapper {
+        padding-bottom: 0 !important;
+    }
+    .mat-form-field-subscript-wrapper {
+        margin-top: 0 !important;
+    }
+
+    .mat-form-field-underline {
+        display: none !important;
+    }
+
+    .mat-slider-thumb-label {
+        transform: rotate(45deg) !important;
+        border-radius: 50% 50% 0 !important;
+    }
+
+    .mat-slider-thumb {
+        transform: scale(0) !important;
+    }
+
+    .mat-slider-thumb-label-text {
+        opacity: 1 !important;
+    }
 }
 
 @include mix-app-theme($popcorn-app-theme);
 
 html,
 body {
-  @media only screen and (min-width: 1000px) {
-    --global-padding: 8em;
-  }
-  @media only screen and (min-width: 600px) {
-    --global-padding: 5em;
-  }
-  @media only screen and (max-width: 600px) {
-    --global-padding: 2em;
-  }
-
-  height: 100%;
-  background-color: $primary-dark;
-  color: $primary-font;
-  button:focus,
-  input:focus,
-  select:focus,
-  textarea:focus {
-    outline: none;
-  }
-  .c-btn {
-    //navbar przyciski
-    transition: all 0.5s;
-    color: $primary-font;
-    background-color: $primary;
-    font-size: 1em;
-    font-weight: 400;
-    border: 1px solid $primary-dark-font;
-  }
-
-  p {
-    font-size: $font-size-5;
-    font-weight: 400;
-    line-height: $line-height-base;
-    margin: 0;
-    margin-bottom: $grid-base; //10px
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: $font-size-4;
-    line-height: $line-height-base;
-    margin: 0;
-  }
-
-  a {
-    color: $primary-font;
-    text-decoration: none;
-    &:hover {
-      color: $primary-font;
-      text-decoration: underline; //ma byc podkreslnik zolty
+    @media only screen and (min-width: 1000px) {
+        --global-padding: 8em;
     }
-  }
-  img {
-    max-width: 100%;
-  }
+    @media only screen and (min-width: 600px) {
+        --global-padding: 5em;
+    }
+    @media only screen and (max-width: 600px) {
+        --global-padding: 2em;
+    }
+
+    height: 100%;
+    background-color: $primary-dark;
+    color: $primary-font;
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+    }
+    .c-btn {
+        //navbar przyciski
+        transition: all 0.5s;
+        color: $primary-font;
+        background-color: $primary;
+        font-size: 1em;
+        font-weight: 400;
+        border: 1px solid $primary-dark-font;
+    }
+
+    p {
+        font-size: $font-size-5;
+        font-weight: 400;
+        line-height: $line-height-base;
+        margin: 0;
+        margin-bottom: $grid-base; //10px
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: $font-size-4;
+        line-height: $line-height-base;
+        margin: 0;
+    }
+
+    a {
+        color: $primary-font;
+        text-decoration: none;
+        &:hover {
+            color: $primary-font;
+            text-decoration: underline; //ma byc podkreslnik zolty
+        }
+    }
+    img {
+        max-width: 100%;
+    }
 }
 
 //-----------mixins------------------------------------
 // Od srednich w gore
 @mixin medium-up {
-  @media (min-width: #{$bp-medium}) {
-    //800px#{}bo zapisane jako string
-    @content //(tu wstawiam dowolne deklaracje);;
-  }
+    @media (min-width: #{$bp-medium}) {
+        //800px#{}bo zapisane jako string
+        @content //(tu wstawiam dowolne deklaracje);;;;;;;;;
+    }
 }
 
 // Od duzych w gore
 @mixin large-up {
-  @media (min-width: #{$bp-large}) {
-    @content;
-  }
+    @media (min-width: #{$bp-large}) {
+        @content;
+    }
 }

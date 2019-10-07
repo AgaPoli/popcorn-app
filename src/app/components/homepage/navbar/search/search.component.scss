@@ -1,23 +1,23 @@
-@import "../../../../../variables";
+@import '../../../../../variables';
 
 input {
-  width: 100%;
-  background-image: url(https://image.flaticon.com/icons/png/512/55/55369.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 20px;
-  height: 50%;
-  transition: border-color 0.2s linear;
-  padding: 4px 55px 4px 55px;
-  border-radius: 2px;
+    width: 100%;
+    background-image: url(https://image.flaticon.com/icons/png/512/55/55369.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20px;
+    height: 50%;
+    transition: border-color 0.2s linear;
+    padding: 4px 55px 4px 55px;
+    border-radius: 2px;
 
-  &:focus {
-    border: 1px solid #fcb500;
-  }
+    &:focus {
+        border: 1px solid #fcb500;
+    }
 }
 
 mat-form-field {
-  width: 100%;
+    width: 100%;
 }
 // .mat-form-field-appearance-legacy .mat-form-field-underline {
 //   height: 0;

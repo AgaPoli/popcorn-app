@@ -1,50 +1,47 @@
 <mat-toolbar>
-  <button id="hamburger" mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <img [routerLink]="['/']" id="logo" src="assets/images/1.2.jpg" alt="Logo" />
-
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="setCategory('upcoming')">NEW</button>
-    <button mat-menu-item (click)="setCategory('popular')">POPULAR</button>
-    <button mat-menu-item (click)="setCategory('topRated')">TOP RATED</button>
-  </mat-menu>
-
-  <span id="btn_group" hidden>
-    <button
-      id="new_movie1"
-      class="nav_btn"
-      mat-button
-      (click)="setCategory('upcoming')"
-    >
-      NEW
+    <button id="hamburger" mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
     </button>
+
+    <img [routerLink]="['/']" id="logo" src="assets/images/1.2.jpg" alt="Logo" />
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="setCategory('upcoming')">NEW</button>
+        <button mat-menu-item (click)="setCategory('popular')">POPULAR</button>
+        <button mat-menu-item (click)="setCategory('topRated')">TOP RATED</button>
+    </mat-menu>
+
+    <span id="btn_group" hidden>
+        <button id="new_movie1" class="nav_btn" mat-button (click)="setCategory('upcoming')">
+            NEW
+        </button>
+        <button id="new_movie2" class="nav_btn" mat-button (click)="setCategory('popular')">
+            POPULAR
+        </button>
+        <button id="new_movie3" class="nav_btn" mat-button (click)="setCategory('topRated')">
+            WATCHLIST
+        </button>
+    </span>
+
+    <app-search id="search"></app-search>
+
     <button
-      id="new_movie2"
-      class="nav_btn"
-      mat-button
-      (click)="setCategory('popular')"
+        id="account_btn"
+        mat-icon-button
+        aria-label="Account"
+        matTooltip="Feature comming soon!"
+        matTooltipPosition="below"
     >
-      POPULAR
+        <mat-icon>account_circle</mat-icon>
     </button>
+
     <button
-      id="new_movie3"
-      class="nav_btn"
-      mat-button
-      (click)="setCategory('topRated')"
+        id="menu_btn"
+        mat-icon-button
+        aria-label="Menu"
+        matTooltip="Feature comming soon!"
+        matTooltipPosition="below"
     >
-      WATCHLIST
+        <mat-icon>more_vert</mat-icon>
     </button>
-  </span>
-
-  <app-search id="search"></app-search>
-
-  <button id="account_btn" mat-icon-button aria-label="Account">
-    <mat-icon>account_circle</mat-icon>
-  </button>
-
-  <button id="menu_btn" mat-icon-button aria-label="Menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
 </mat-toolbar>

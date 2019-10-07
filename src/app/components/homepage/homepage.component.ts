@@ -3,20 +3,18 @@ import { FilterService } from 'src/app/filter.service';
 import { MatSidenav } from '@angular/material';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+    selector: 'app-homepage',
+    templateUrl: './homepage.component.html',
+    styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
+    @ViewChild('snav', { static: false }) sideNav: MatSidenav;
 
-  @ViewChild('snav', { static: false }) sideNav: MatSidenav;
+    constructor(private filterService: FilterService) {}
 
-  constructor(private filterService: FilterService) { }
+    ngOnInit() {}
 
-  ngOnInit() {}
-
-  toogleSidenav(event: any) {
-    this.sideNav.toggle();
-  }
-
+    toogleSidenav(event: any) {
+        this.sideNav.toggle();
+    }
 }
