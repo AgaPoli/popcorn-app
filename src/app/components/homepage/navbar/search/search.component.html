@@ -8,8 +8,9 @@ type="text" placeholder="  Search for movies "> -->
         matInput
         placeholder="Search for movies"
         [matAutocomplete]="auto"
-        (keyup.enter)="searchMovie(searchMovieInput.value)"
+        (keyup)="dynmicSearch(searchMovieInput.value)"
     />
+    <!-- (keyup.enter)="searchMovie(searchMovieInput.value)" -->
 
     <mat-autocomplete #auto="matAutocomplete">
         <mat-option

@@ -53,11 +53,7 @@ mat-toolbar {
     color: $primary-darkest-font;
 }
 
-.mat-flat-button {
-    color: $primary-font;
-    background: none;
-    text-transform: uppercase;
-}
+
 .mat-toolbar {
     background-color: $primary-dark;
 }
@@ -88,11 +84,13 @@ h2 {
 @media (min-width: 1024px) {
     mat-toolbar {
         display: grid;
-        grid-template-areas: 'categories filters release_year genres rating reset . ';
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 'categories filters release_year genres rating  ';
+        grid-template-columns: repeat(5, 1fr);
         padding-top: 0;
         padding-bottom: 0;
         width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
         // max-width: 1170px;
         // margin-left: auto;
         // margin-right: auto;

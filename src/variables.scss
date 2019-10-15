@@ -39,6 +39,7 @@ $bp-large: '1200px';
     @media (min-width: #{$bp-medium}) {
         //800px#{}bo zapisane jako string
         // tu wstawiam dowolne deklaracje
+        @content;
     }
 }
 
