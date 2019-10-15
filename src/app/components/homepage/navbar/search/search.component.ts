@@ -16,6 +16,15 @@ export class SearchComponent implements OnInit {
 
     ngOnInit() {}
 
+    dynmicSearch(movieTitle: string) {
+        return new Promise(function(resolve, reject) {
+            setTimeout(() => {
+                console.log(movieTitle);
+                resolve();
+            }, 2000);
+        });
+    }
+
     searchMovie(movieTitle: string): void {
         this.apiService.searchMovie(movieTitle).then(movies => {
             this.movies = movies.results;
@@ -35,4 +44,4 @@ export class SearchComponent implements OnInit {
     redirectToMovie(id: number): void {
         this.router.navigate(['movie', id]);
     }
-}
+} //**** https://stackoverflow.com/questions/39538473/using-settimeout-on-promise-chain
